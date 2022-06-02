@@ -131,13 +131,13 @@ function setMobileMenu() {
   });
 
   mobileNavUl.addEventListener('click', event => {
-    if (event.target.tagName.toLowerCase() === 'a') {
+    if (event.target.tagName.toLowerCase() === 'a' || event.target.tagName.toLowerCase() === 'i' || event.target.tagName.toLowerCase() === 'span') {
       setTimeout(hideMobileMenu(), 1000);
     }
   });
 
   mobileNavUl.addEventListener('touchend', event => {
-    if (event.target.tagName.toLowerCase() === 'a') {
+    if (event.target.tagName.toLowerCase() === 'a' || event.target.tagName.toLowerCase() === 'i' || event.target.tagName.toLowerCase() === 'span') {
       setTimeout(hideMobileMenu(), 1000);
     }
   });
