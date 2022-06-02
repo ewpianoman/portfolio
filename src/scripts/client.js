@@ -97,6 +97,7 @@ function setMobileMenu() {
   const closeTrigger = document.getElementById('nav-trigger-close');
   const mobileNav = document.getElementById('mobile-nav');
   const mobileNavUl = document.getElementById('mobile-nav-ul');
+  const mobileLinks = document.querySelectorAll('.mobile-link');
 
   function showMobileMenu() {
     openTrigger.classList.add('hidden');
@@ -130,13 +131,24 @@ function setMobileMenu() {
     hideMobileMenu();
   });
 
-  document.querySelector('mobile-link').addEventListener('touchend', event => {
-    event.preventDefault();
-    hideMobileMenu();
-    setTimeout(() => {
-      const nextPage = event.target.href;
-      window.location.href = nextPage;
-    }, 2000);
+  mobileLinks.forEach(link => {
+    link.addEventListener('touchend', event => {
+      event.preventDefault();
+      hideMobileMenu();
+      setTimeout(() => {
+        const nextPage = event.target.href;
+        window.location.href = nextPage;
+      }, 2000);
+    });
+
+    link.addEventListener('click', event => {
+      event.preventDefault();
+      hideMobileMenu();
+      setTimeout(() => {
+        const nextPage = event.target.href;
+        window.location.href = nextPage;
+      }, 2000);
+    });
   });
 }
 
