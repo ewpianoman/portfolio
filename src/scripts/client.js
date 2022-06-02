@@ -130,24 +130,13 @@ function setMobileMenu() {
     hideMobileMenu();
   });
 
-  document.querySelectorAll('.mobile-link').foreach(item => {
-    item.addEventListener('click', event => {
-      event.preventDefault();
-      hideMobileMenu();
-      setTimeout(() => {
-        const nextPage = event.target.href;
-        window.location.href = nextPage;
-      }, 2000);
-    });
-
-    item.addEventListener('touchend', event => {
-      event.preventDefault();
-      hideMobileMenu();
-      setTimeout(() => {
-        const nextPage = event.target.href;
-        window.location.href = nextPage;
-      }, 2000);
-    });
+  document.querySelector('mobile-link').addEventListener('touchend', event => {
+    event.preventDefault();
+    hideMobileMenu();
+    setTimeout(() => {
+      const nextPage = event.target.href;
+      window.location.href = nextPage;
+    }, 2000);
   });
 }
 
