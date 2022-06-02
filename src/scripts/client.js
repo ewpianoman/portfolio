@@ -130,16 +130,24 @@ function setMobileMenu() {
     hideMobileMenu();
   });
 
-  mobileNavUl.addEventListener('click', event => {
-    if (event.target.tagName.toLowerCase() === 'span') {
-      setTimeout(hideMobileMenu(), 1000);
-    }
-  });
+  document.querySelectorAll('.mobile-link').foreach(item => {
+    item.addEventListener('click', event => {
+      event.preventDefault();
+      hideMobileMenu();
+      setTimeout(() => {
+        const nextPage = event.target.href;
+        window.location.href = nextPage;
+      }, 2000);
+    });
 
-  mobileNavUl.addEventListener('touchend', event => {
-    if (event.target.tagName.toLowerCase() === 'span') {
-      setTimeout(hideMobileMenu(), 1000);
-    }
+    item.addEventListener('touchend', event => {
+      event.preventDefault();
+      hideMobileMenu();
+      setTimeout(() => {
+        const nextPage = event.target.href;
+        window.location.href = nextPage;
+      }, 2000);
+    });
   });
 }
 

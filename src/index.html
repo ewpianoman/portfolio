@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Eric M. Wilson - Web Developer, Designer, Teacher, & Musician</title>
+    <meta name="author" content="Eric Wilson">
+    <meta name="keywords" content="web, designer, developer, musician, javascript, node, express, mongo, mern, react, piano, graphic design">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="images/favicons/site.webmanifest">
+    <link rel="mask-icon" href="images/favicons/safari-pinned-tab.svg" color="#de9e48">
+    <meta name="msapplication-TileColor" content="#7a431c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- CSS Files -->
+    <link href="style/main.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+    <nav id="main-nav" class="mobile-hidden navigation">
+      <ul class="no-list-style">
+        <li class="active"><a href="#home" title="HOME" class="no-link-style"><i class="fa-solid fa-house"></i> <span class="show-on-hover">HOME</span></a></li>
+        <li><a href="#about" title="ABOUT" class="no-link-style"><i class="fa-solid fa-user"></i> <span class="show-on-hover">ABOUT</span></a></li>
+        <li><a href="#resume" title="RESUME" class="no-link-style"><i class="fa-solid fa-file"></i> <span class="show-on-hover">RESUME</span></a></li>
+        <li><a href="#portfolio" title="PORTFOLIO" class="no-link-style"><i class="fa-solid fa-eye"></i> <span class="show-on-hover">PORTFOLIO</span></a></li>
+        <li><a href="#contact" title="CONTACT" class="no-link-style"><i class="fa-solid fa-envelope"></i> <span class="show-on-hover">CONTACT</span></a></li>
+      </ul>
+    </nav>
+    <button id="nav-trigger-open" class="no-button-style btn-light nav-trigger mobile-only"><i class="fa-solid fa-bars"></i></button>
+    <nav id="mobile-nav" class="off-screen mobile-only navigation">
+      <button id="nav-trigger-close" class="no-button-style btn-light nav-trigger off-screen"><i class="fa-solid fa-xmark"></i></button>
+      <h2>MENU</h2>
+      <ul class="no-list-style" id="mobile-nav-ul">
+        <li><a href="#home" title="HOME" class="no-link-style mobile-link"><span><i class="fa-solid fa-house"></i> HOME</span></a></li>
+        <li><a href="#about" title="ABOUT" class="no-link-style mobile-link"><span><i class="fa-solid fa-user"></i> ABOUT</span></a></li>
+        <li><a href="#resume" title="RESUME" class="no-link-style mobile-link"><span><i class="fa-solid fa-file"></i> RESUME</span></a></li>
+        <li><a href="#portfolio" title="PORTFOLIO" class="no-link-style mobile-link"><span><i class="fa-solid fa-eye"></i> PORTFOLIO</span></a></li>
+        <li><a href="#contact" title="CONTACT" class="no-link-style mobile-link"><span><i class="fa-solid fa-envelope"></i> CONTACT</span></a></li>
+        <ul id="social" class="no-list-style">
+          <li class="inline-block"><a href="https://github.com/ewpianoman" title="GitHub" class="no-link-style" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+          <li class="inline-block"><a href="https://medium.com/@ewpiano" title="Medium" class="no-link-style" target="_blank"><i class="fa-brands fa-medium"></i></a></li>
+          <li class="inline-block"><a href="https://www.linkedin.com/in/ewpianoman/" title="LinkedIn" class="no-link-style" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
+          <li class="inline-block"><a href="https://twitter.com/ericwilsonpiano" title="twitter" class="no-link-style" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+        </ul>
+      </ul>
+    </nav>
+    <main id="container">
+      <a href="#home" id="to-top" class="no-link-style hidden opacity-0" title="Back to Top"><i class="fa-solid fa-circle-up"></i></a>
+      <section id="home" class="dev-bg">
+        <div class="overlay overlay-dark">
+          <div class="padding-top-15">
+            <a href="https://github.com/ewpianoman" target="_blank"><img src="images/eric-wilson.jpeg" alt="Eric Wilson" title="Eric Wilson" id="profile-img"></a>
+            <h1 id="name">Hi, I'm Eric!</h1>
+            <h2 id="short-bio">I'm a <span id="jobTitleOutput"></span><span id="cursor">|</span></h2>
+            <ul id="social" class="no-list-style">
+              <li class="inline-block"><a href="https://github.com/ewpianoman" title="GitHub" class="no-link-style" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+              <li class="inline-block"><a href="https://medium.com/@ewpiano" title="Medium" class="no-link-style" target="_blank"><i class="fa-brands fa-medium"></i></a></li>
+              <li class="inline-block"><a href="https://www.linkedin.com/in/ewpianoman/" title="LinkedIn" class="no-link-style" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
+              <li class="inline-block"><a href="https://twitter.com/ericwilsonpiano" title="twitter" class="no-link-style" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section id="about" class="padding-top-8">
+        <h2 class="section-heading">ABOUT</h2>
+      </section>
+      <section id="resume" class="padding-top-8">
+        <h2 class="section-heading">RESUME</h2>
+      </section>
+      <section id="portfolio" class="padding-top-8">
+        <h2 class="section-heading">PORTFOLIO</h2>
+      </section>
+      <section id="contact" class="padding-top-8">
+        <h2 class="section-heading">CONTACT</h2>
+      </section>
+    </main>
+
+    <script src="scripts/client.js" type="text/javascript"></script>
+  </body>
+</html>
