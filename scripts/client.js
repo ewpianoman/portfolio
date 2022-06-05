@@ -92,58 +92,48 @@ async function printJobs() {
 printJobs();
 
 // MOBILE NAVIGATION
-function setMobileMenu() {
-  const openTrigger = document.getElementById('nav-trigger-open');
-  const closeTrigger = document.getElementById('nav-trigger-close');
-  const mobileNav = document.getElementById('mobile-nav');
-  const mobileNavUl = document.getElementById('mobile-nav-ul');
+const openTrigger = document.getElementById('nav-trigger-open');
+const closeTrigger = document.getElementById('nav-trigger-close');
+const mobileNav = document.getElementById('mobile-nav');
+const mobileNavUl = document.getElementById('mobile-nav-ul');
 
-  function showMobileMenu() {
-    openTrigger.classList.add('hidden');
-    mobileNav.classList.remove('off-screen');
-    mobileNav.classList.add('on-screen');
-    closeTrigger.classList.remove('off-screen');
-    closeTrigger.classList.add('on-screen');
-  }
-
-  function hideMobileMenu() {
-    openTrigger.classList.remove('hidden');
-    mobileNav.classList.remove('on-screen');
-    mobileNav.classList.add('off-screen');
-    closeTrigger.classList.remove('on-screen');
-    closeTrigger.classList.add('off-screen');
-  }
-
-  openTrigger.addEventListener('click', event => {
-    showMobileMenu();
-  });
-
-  openTrigger.addEventListener('touchstart', event => {
-    showMobileMenu();
-  });
-
-  closeTrigger.addEventListener('click', event => {
-    hideMobileMenu();
-  });
-
-  closeTrigger.addEventListener('touchstart', event => {
-    hideMobileMenu();
-  });
-
-  // mobileNavUl.addEventListener('click', event => {
-  //   if (event.target.tagName.toLowerCase() === 'span') {
-  //     setTimeout(hideMobileMenu(), 500);
-  //   }
-  // });
-  //
-  // mobileNavUl.addEventListener('touchend', event => {
-  //   if (event.target.tagName.toLowerCase() === 'span') {
-  //     setTimeout(hideMobileMenu(), 500);
-  //   }
-  // });
+function showMobileMenu() {
+  openTrigger.classList.add('hidden');
+  mobileNav.classList.remove('off-screen');
+  mobileNav.classList.add('on-screen');
+  closeTrigger.classList.remove('off-screen');
+  closeTrigger.classList.add('on-screen');
 }
 
-setMobileMenu();
+function hideMobileMenu() {
+  openTrigger.classList.remove('hidden');
+  mobileNav.classList.remove('on-screen');
+  mobileNav.classList.add('off-screen');
+  closeTrigger.classList.remove('on-screen');
+  closeTrigger.classList.add('off-screen');
+}
+
+openTrigger.addEventListener('click', event => {
+  showMobileMenu();
+});
+
+openTrigger.addEventListener('touchstart', event => {
+  showMobileMenu();
+});
+
+closeTrigger.addEventListener('click', event => {
+  hideMobileMenu();
+});
+
+closeTrigger.addEventListener('touchstart', event => {
+  hideMobileMenu();
+});
+
+function goToSection(event, target) {
+  event.preventDefault();
+  window.location.assign(target);
+  hideMobileMenu();
+}
 
 // Hide Back-to-Top Button until scrolllet scrollPos = 0;
 let scrollPosition = 0;
