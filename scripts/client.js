@@ -3,6 +3,7 @@ let jobList = ['Fullstack JavaScript Developer.', 'Graphic Designer.', 'Teacher.
 let jobClassList = ['dev-bg', 'design-bg', 'teaching-bg', 'music-bg'];
 const jobOutput = document.getElementById('jobTitleOutput');
 const cursor = document.getElementById('cursor');
+let tabHidden = false;
 
 // DISPLAY JOB TITLES
 // Flash cursor for specified time, then return promise when finished.
@@ -78,12 +79,16 @@ async function printJobs() {
   delay = delay + (jobList.length * 3500);
 
   for (const job of jobList) {
-    changeHomeBg(index);
-    await typeText(job);
-    await blinkCursor();
-    await eraseText(job);
-    await blinkCursor(1500);
-    index++;
+    if (!tabHidden) {
+      changeHomeBg(index);
+      await typeText(job);
+      await blinkCursor();
+      await eraseText(job);
+      await blinkCursor(1500);
+      index++;
+    } else {
+      break;
+    }
   }
 
   setTimeout(printJobs(), delay);
@@ -185,3 +190,35 @@ function checkPosition() {
 }
 
 window.addEventListener('scroll', checkPosition);
+
+// Set Up Visibility API
+let hidden, visibilityChange;
+
+if (typeof document.hidden !== "undefined") { // Opera 12.10 and Firefox 18 and later support
+  hidden = "hidden";
+  visibilityChange = "visibilitychange";
+} else if (typeof document.msHidden !== "undefined") {
+  hidden = "msHidden";
+  visibilityChange = "msvisibilitychange";
+} else if (typeof document.webkitHidden !== "undefined") {
+  hidden = "webkitHidden";
+  visibilityChange = "webkitvisibilitychange";
+}
+
+function handleVisbilityChange() {
+  if (document[hidden]) {
+    tabHidden = true;
+  } else {
+    tabHidden = false;
+    printJobs();
+  }
+}
+
+
+// Warn if the browser doesn't support addEventListener or the Page Visibility API
+if (typeof document.addEventListener === "undefined" || hidden === undefined) {
+  console.log("This demo requires a browser, such as Google Chrome or Firefox, that supports the Page Visibility API.");
+} else {
+  // Handle page visibility change
+  document.addEventListener(visibilityChange, handleVisibilityChange, false);
+}
