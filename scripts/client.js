@@ -175,23 +175,20 @@ function navHighlighter() {
 
 
 // Hide Back-to-Top Button until scrolllet scrollPos = 0;
-// Needs Work
-let scrollPosition = 0;
-const toTopBtn = document.getElementById('to-top');
+const showOnPx = 750;
+const backToTopButton = document.getElementById('to-top');
 
-function checkPosition() {
-  let windowY = window.scrollY;
-  if (windowY < scrollPosition) {
-    // Scrolling UP
-    toTopBtn.classList.add('hidden');
+const scrollContainer = () => {
+  return document.documentElement || document.body;
+};
+
+document.addEventListener("scroll", () => {
+  if (scrollContainer().scrollTop > showOnPx) {
+    backToTopButton.classList.remove("hidden")
   } else {
-    // Scrolling DOWN
-    toTopBtn.classList.remove('hidden');
+    backToTopButton.classList.add("hidden")
   }
-  scrollPosition = windowY;
-}
-
-window.addEventListener('scroll', checkPosition);
+})
 
 // Set Up Visibility API
 let hidden, visibilityChange;
