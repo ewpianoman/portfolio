@@ -26,7 +26,6 @@ main {
 
 #to-top {
   color: #de9e48;
-  opacity: 0.5;
   position: absolute;
   font-size: 2.5em;
   position: fixed;
@@ -36,9 +35,7 @@ main {
 }
 
 #to-top:hover {
-  color: #de9e48;
-  opacity: 1.0;
-  transition: opacity .3s;
+  opacity: 0.75;
 }
 
 /* UTILS */
