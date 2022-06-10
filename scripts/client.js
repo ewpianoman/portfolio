@@ -43,6 +43,7 @@ function eraseText(string) {
   let index = 0;
   let text = string;
   let delay = string.length * 100;
+  jobOutput.innerText = text;
 
   let eraseInterval = setInterval(() => {
     text = text.slice(0, -1);
@@ -87,6 +88,7 @@ async function printJobs() {
       await blinkCursor(1500);
       index++;
     } else {
+      index = 0;
       break;
     }
   }
