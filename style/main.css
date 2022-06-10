@@ -332,6 +332,10 @@ main {
   top: 25vh;
 }
 
+.mobile-active {
+  color: #de9e48;
+}
+
 /* RESPONSIVE STYLES */
 /* Phones */
 @media only screen and (max-width: 480) {

@@ -135,7 +135,40 @@ function goToSection(event, target) {
   hideMobileMenu();
 }
 
+// Update Active Link in Menu
+const sections = document.querySelectorAll('section[id]');
+
+window.addEventListener('scroll', navHighlighter);
+
+function navHighlighter() {
+
+  // Get current scroll position
+  let scrollY = window.pageYOffset;
+
+  // Now we loop through sections to get height, top and ID values for each
+  sections.forEach(current => {
+
+    const sectionHeight = current.offsetHeight;
+    const sectionTop = (current.getBoundingClientRect().top + window.pageYOffset) - 50;
+    let sectionId = current.getAttribute('id');
+
+    /*
+    - If our current scroll position enters the space where current section on screen is, add .active class to corresponding navigation link, else remove it
+    - To know which link needs an active class, we use sectionId variable we are getting while looping through sections as an selector
+    */
+    if ( scrollY > sectionTop && scrollY <= sectionTop + sectionHeight ) {
+      document.querySelector('#main-nav a[href*=' + sectionId + ']').parentNode.classList.add('active');
+      document.querySelector('#mobile-nav a[href*=' + sectionId + ']').classList.add('mobile-active');
+    } else {
+      document.querySelector('#main-nav a[href*=' + sectionId + ']').parentNode.classList.remove('active');
+      document.querySelector('#mobile-nav a[href*=' + sectionId + ']').classList.remove('mobile-active');
+    }
+  });
+}
+
+
 // Hide Back-to-Top Button until scrolllet scrollPos = 0;
+// Needs Work
 let scrollPosition = 0;
 const toTopBtn = document.getElementById('to-top');
 
@@ -149,7 +182,6 @@ function checkPosition() {
     toTopBtn.classList.remove('hidden');
   }
   scrollPosition = windowY;
-  console.log(scrollPosition);
 }
 
 window.addEventListener('scroll', checkPosition);
