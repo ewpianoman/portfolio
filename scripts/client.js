@@ -1,5 +1,6 @@
 // Variables & Constants
 let jobList = ['Fullstack Web Developer.', 'Graphic Designer.', 'Teacher.', 'Musician.'];
+let bublyGreetings = ['hiii', 'hello', 'hi hi', 'haayy', 'oh hi', 'heyo', 'ayyy', 'aw hi', 'sup', 'hi u', 'yo', 'aloha', 'hi', 'hiya', 'psst'];
 let jobClassList = ['dev-bg', 'design-bg', 'teaching-bg', 'music-bg'];
 const jobOutput = document.getElementById('jobTitleOutput');
 const cursor = document.getElementById('cursor');
@@ -173,6 +174,20 @@ function navHighlighter() {
   });
 }
 
+// Set Greeting in ABOUT Section
+function bubly() {
+  const greeting = document.getElementById('bubly');
+  const randomNum = generateRandom(0, bublyGreetings.length - 1);
+  greeting.innerText = bublyGreetings[randomNum];
+}
+
+bubly();
+
+window.addEventListener('keydown', e => {
+  if (e.key === 'Tab') {
+    bubly();
+  }
+});
 
 // Hide Back-to-Top Button until scrolllet scrollPos = 0;
 const showOnPx = 750;
@@ -236,4 +251,22 @@ function showMainMenu() {
   mainMenu.classList.remove('off-screen-left');
   mainMenu.classList.add('on-screen-left');
   showMenu.classList.add('hidden');
+}
+
+// Helper Functions
+function generateRandom(min = 0, max = 100) {
+
+  // find diff
+  let difference = max - min;
+
+  // generate random number 
+  let rand = Math.random();
+
+  // multiply with difference 
+  rand = Math.floor( rand * difference);
+
+  // add with min value 
+  rand = rand + min;
+
+  return rand;
 }

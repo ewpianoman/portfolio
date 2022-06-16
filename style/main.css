@@ -272,6 +272,7 @@ main {
   margin: 0 auto;
   min-width: 500px;
   padding: 0 5vw;
+  box-sizing: border-box;
 }
 
 #about-blurb h3 {
