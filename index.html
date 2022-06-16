@@ -28,15 +28,15 @@
     <link href="style/main.css" type="text/css" rel="stylesheet">
   </head>
   <body>
+    <button class="no-button-style white hidden alt-font mobile-hidden rotate" onclick="showMainMenu()" id="show-menu"><i class="fa-solid fa-angle-down"></i> MENU <i class="fa-solid fa-angle-down"></i></button>
     <nav id="main-nav" class="mobile-hidden navigation">
-      <button class="no-button-style white hidden alt-font" onclick="showMenu()" id="show-menu">SHOW MENU <i class="fa-solid fa-angle-right"></i></button>
       <ul class="no-list-style">
-        <li><button class="no-button-style white alt-font" onclick="hideMenu()" id="hide-menu" title="Hide Menu"><i class="fa-solid fa-angle-left"></i></button></li>
         <li class="active"><a href="#home" title="HOME" class="no-link-style nav-link"><i class="fa-solid fa-house"></i> <span class="show-on-hover">HOME</span></a></li>
         <li><a href="#about" title="ABOUT" class="no-link-style nav-link"><i class="fa-solid fa-user"></i> <span class="show-on-hover">ABOUT</span></a></li>
         <li><a href="#resume" title="RESUME" class="no-link-style nav-link"><i class="fa-solid fa-file"></i> <span class="show-on-hover">RESUME</span></a></li>
         <li><a href="#portfolio" title="PORTFOLIO" class="no-link-style nav-link"><i class="fa-solid fa-eye"></i> <span class="show-on-hover">PORTFOLIO</span></a></li>
         <li><a href="#contact" title="CONTACT" class="no-link-style nav-link"><i class="fa-solid fa-envelope"></i> <span class="show-on-hover">CONTACT</span></a></li>
+        <li><button class="no-button-style white alt-font" onclick="hideMainMenu()" id="hide-menu" title="Hide Menu"><i class="fa-solid fa-angle-left"></i></button></li>
       </ul>
     </nav>
     <button id="nav-trigger-open" class="no-button-style btn-light nav-trigger mobile-only"><i class="fa-solid fa-bars"></i></button>
@@ -77,10 +77,10 @@
       <section id="about" class="padding-top-8 section">
         <h2 class="section-heading">ABOUT ME</h2>
         <div class="flex wrap">
-          <div class="flex-grow-1 text-center" id="about-img-container">
+          <div class="text-center" id="about-img-container">
             <img src="images/eric-wilson-profile.png" alt="Eric Wilson" id="about-img">
           </div>
-          <div class="flex-grow-3 text-left" id="about-blurb">
+          <div class="text-left" id="about-blurb">
             <h3 id="bubly">hii</h3>
             <p><span class="lead-in">I'm Eric, and I am a Fullstack Web Developer, Graphic Designer, Teacher, and Musician in the Evansville, Indiana area.</span></p> 
             <p>I have worked as an Administrative Assistant and Lecturer at a university, Director of Customer Success at a tech startup, High School Computer Science Teacher, Church Music Director, Freelance Graphic Designer, Coding Bootcamp Facilitator, and - most recently - a Senior Customer Support Analyst with an edtech company.

@@ -213,11 +213,27 @@ function handleVisbilityChange() {
   }
 }
 
-
 // Warn if the browser doesn't support addEventListener or the Page Visibility API
 if (typeof document.addEventListener === "undefined" || hidden === undefined) {
   console.log("This demo requires a browser, such as Google Chrome or Firefox, that supports the Page Visibility API.");
 } else {
   // Handle page visibility change
   document.addEventListener(visibilityChange, handleVisibilityChange, false);
+}
+
+// Set Up MAIN MENU Collapse Button
+function hideMainMenu() {
+  const mainMenu = document.getElementById('main-nav');
+  const showMenu = document.getElementById('show-menu');
+  mainMenu.classList.remove('on-screen-left');
+  mainMenu.classList.add('off-screen-left');
+  showMenu.classList.remove('hidden');
+}
+
+function showMainMenu() {
+  const mainMenu = document.getElementById('main-nav');
+  const showMenu = document.getElementById('show-menu');
+  mainMenu.classList.remove('off-screen-left');
+  mainMenu.classList.add('on-screen-left');
+  showMenu.classList.add('hidden');
 }

@@ -139,8 +139,10 @@ main {
   display: -ms-flexbox;
   display: -moz-flex;
   display: -webkit-flex;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: row;
+  width: 100%;
+  padding: 0 9vw;
+  box-sizing: border-box;
 }
 
 .nowrap  { 
@@ -151,15 +153,7 @@ main {
 .wrap    { 
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
-}  
-
-.flex-grow-1 {
-  flex-grow: 1;
-}
-
-.flex-grow-3 {
-  flex-grow: 3;
-}
+} 
 
 .white {
   color: #fff;
@@ -167,6 +161,10 @@ main {
 
 .alt-font {
   font-family: 'Roboto Mono', monospace;
+}
+
+.rotate {
+  transform: rotate(-90deg) !important;
 }
 
 /* HOME SECTION */
@@ -254,25 +252,26 @@ main {
 }
 
 #about-img {
-  width: 100%;
   margin: 0 auto;
   border-radius: 100%;
+  width: 100%;
+  min-width: 200px;
+  max-width: 300px;
 }
 
 #about-img-container {
-  width: 100vw;
-  max-width: 400px;
-  box-sizing: border-box;
   padding: 0 25px;
+  flex: 1;
 }
 
 #about-blurb {
-  width: 100vw;
-  max-width: 1000px;
-  box-sizing: border-box;
-  padding: 0 5vw;
   font-size: 1.25em;
   line-height: 1.75;
+  flex: 3;
+  width: 100%;
+  margin: 0 auto;
+  min-width: 500px;
+  padding: 0 5vw;
 }
 
 #about-blurb h3 {
@@ -314,6 +313,12 @@ main {
   margin: 15px 0;
 }
 
+#main-nav {
+  position: fixed;
+  left: -10px;
+  top: 25vh;
+}
+
 #main-nav a {
   padding: 15px;
   display: inline-block;
@@ -349,12 +354,33 @@ main {
 
 #hide-menu:hover, #show-menu:hover {
   cursor: pointer;
+  color: #de9e48;
+  transition: all .3s;
 }
 
 #hide-menu {
   font-size: 2em;
   position: relative;
   left: 10px;
+  text-shadow: 0px 0px 5px #7a431c;
+}
+
+#show-menu {
+  position: fixed;
+  left: -30px;
+  top: 40vh;
+  font-size: 1.3em;
+  text-shadow: 0px 0px 5px #7a431c;
+}
+
+.off-screen-left {
+  left: -150px !important;
+  transition: all .5s;
+}
+
+.on-screen-left {
+  left: -10px !important;
+  transition: all .3s;
 }
 
 /* MOBILE NAVIGATION STYLES */
@@ -423,19 +449,13 @@ main {
   margin-right: 25px;
 }
 
-#main-nav {
-  position: fixed;
-  left: 0;
-  top: 25vh;
-}
-
 .mobile-active {
   color: #de9e48;
 }
 
 /* RESPONSIVE STYLES */
 /* Phones */
-@media only screen and (max-width: 480) {
+@media only screen and (max-width: 480px) {
   .phone-only {
     display: none;
   }
@@ -461,6 +481,10 @@ main {
 
   #about-blurb {
     padding: 0 10vw;
+  }
+
+  .flex {
+    padding: 0 2vw;
   }
 }
 
