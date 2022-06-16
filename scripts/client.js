@@ -1,5 +1,5 @@
 // Variables & Constants
-let jobList = ['Fullstack JavaScript Developer.', 'Graphic Designer.', 'Teacher.', 'Pianist.'];
+let jobList = ['Fullstack Web Developer.', 'Graphic Designer.', 'Teacher.', 'Musician.'];
 let jobClassList = ['dev-bg', 'design-bg', 'teaching-bg', 'music-bg'];
 const jobOutput = document.getElementById('jobTitleOutput');
 const cursor = document.getElementById('cursor');

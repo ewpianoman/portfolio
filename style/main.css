@@ -101,6 +101,10 @@ main {
   padding-top: 8vh;
 }
 
+.yellow, a {
+  color: #de9e48;
+}
+
 .section-heading {
   color: #ffffff;
   font-size: 2em;
@@ -109,6 +113,22 @@ main {
   border-bottom: 4px solid #de9e48;
   margin: 0 auto;
   max-width: 200px;
+}
+
+.lead-in {
+  font-size: 1.25rem;
+  font-family: 'Roboto Mono', monospace;
+  max-width: 1200px;
+  margin: 50px auto;
+  line-height: 2.5rem;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
 }
 
 /* HOME SECTION */
@@ -339,12 +359,20 @@ main {
   .phone-only {
     display: none;
   }
+
+  .lead-in {
+    padding: 0 2vw;
+  }
 }
 
 /* Tablets */
 @media only screen and (max-width: 768px) {
   .mobile-hidden {
     display: none;
+  }
+
+  .lead-in {
+    font-size: 1rem;
   }
 }
 
