@@ -76,6 +76,27 @@ main {
   outline: none;
 }
 
+.button-default {
+  background-color: #de9e48;
+  border-radius: 50px;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 24px;
+  text-transform: uppercase;
+  font-family: 'Roboto Mono', monospace;
+  letter-spacing: 2px;
+}
+
+.button-large {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.button-default:hover {
+  opacity: .7;
+  transition: opacity .3s;
+}
+
 .inline-block {
   display: inline-block;
 }
@@ -167,12 +188,21 @@ main {
   transform: rotate(-90deg) !important;
 }
 
+.text-container {
+  margin-bottom: 50px;
+}
+
 /* HOME SECTION */
 #home {
   width: 100vw;
   min-height: 100vh;
   box-sizing: border-box;
   transition: background 1.5s ease-in-out;
+}
+
+#home .button-default {
+  margin-top: 50px;
+  display: inline-block;
 }
 
 .dev-bg {
@@ -360,9 +390,9 @@ main {
 }
 
 #hide-menu {
-  font-size: 2em;
+  font-size: 1.2em;
   position: relative;
-  left: 10px;
+  right: 10px;
   text-shadow: 0px 0px 5px #7a431c;
 }
 
@@ -370,7 +400,7 @@ main {
   position: fixed;
   left: -30px;
   top: 40vh;
-  font-size: 1.3em;
+  font-size: 1.5em;
   text-shadow: 0px 0px 5px #7a431c;
 }
 

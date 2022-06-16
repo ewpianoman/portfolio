@@ -177,31 +177,37 @@ function navHighlighter() {
 // Set Greeting in ABOUT Section
 function bubly() {
   const greeting = document.getElementById('bubly');
-  const randomNum = generateRandom(0, bublyGreetings.length - 1);
-  greeting.innerText = bublyGreetings[randomNum];
+  let randomNum = generateRandom(0, bublyGreetings.length - 1);
+  let currentGreeting = greeting.innerText;
+  let nextGreeting = bublyGreetings[randomNum];
+  if (nextGreeting !== currentGreeting) {
+    greeting.innerText = bublyGreetings[randomNum];
+  } else {
+    bubly();
+  }
 }
 
 bubly();
 
-window.addEventListener('keydown', e => {
-  if (e.key === 'Tab') {
-    bubly();
-  }
-});
+setInterval(bubly, 2500);
 
-// Hide Back-to-Top Button until scrolllet scrollPos = 0;
+// Scoll Functions
 const showOnPx = 750;
 const backToTopButton = document.getElementById('to-top');
+const hideMainMenuBtn = document.getElementById('hide-menu');
 
 const scrollContainer = () => {
   return document.documentElement || document.body;
 };
 
-document.addEventListener("scroll", () => {
+document.addEventListener('scroll', () => {
   if (scrollContainer().scrollTop > showOnPx) {
-    backToTopButton.classList.remove("hidden")
+    backToTopButton.classList.remove('hidden');
+    hideMainMenuBtn.classList.remove('hidden');
   } else {
-    backToTopButton.classList.add("hidden")
+    backToTopButton.classList.add('hidden');
+    hideMainMenuBtn.classList.add('hidden');
+    showMainMenu();
   }
 })
 
