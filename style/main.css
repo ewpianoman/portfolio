@@ -204,6 +204,10 @@ main {
   font-size: 1.2rem;
 }
 
+.text-upper {
+  text-transform: uppercase;
+}
+
 /* HOME SECTION */
 #home {
   width: 100vw;
@@ -350,6 +354,12 @@ main {
   box-sizing: border-box;
 }
 
+/* FOOTER */
+.credits {
+  font-size: 1rem;
+  margin: 50px auto;
+}
+
 /* MAIN NAVIGATION STYLES */
 #main-nav li {
   margin: 15px 0;
@@ -367,7 +377,7 @@ main {
   font-size: 1.25rem;
   border-radius: 50px;
   background-color: rgba(255, 255, 255, 0.9);
-  width: 1.25rem;
+  width: 1.6rem;
   text-align: center;
   color: #563728;
   z-index: 110;

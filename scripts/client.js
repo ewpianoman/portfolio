@@ -259,6 +259,19 @@ function showMainMenu() {
   showMenu.classList.add('hidden');
 }
 
+// COPYRIGHT FUNCTION
+function setCopyrightDate() {
+  const creditsYear = document.getElementById('copy-date');
+  let startYear = creditsYear.innerText;
+  let currentYear = new Date().getFullYear();
+  
+  if (parseInt(startYear) !== currentYear) {
+    creditsYear.innerHTML += `&#8211;${currentYear}`;
+  }
+}
+
+setCopyrightDate();
+
 // Helper Functions
 function generateRandom(min = 0, max = 100) {
 
