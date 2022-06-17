@@ -1,10 +1,10 @@
 html {
   scroll-behavior: smooth;
+  font-size: 14px;
 }
 
 body {
   font-family: 'Roboto', sans-serif;
-  font-size: 14px;
   background-color: rgba(55, 44, 46, 1);
   background-size: cover;
   color: #fff;
@@ -27,7 +27,7 @@ main {
 #to-top {
   color: #de9e48;
   position: absolute;
-  font-size: 2.5em;
+  font-size: 2.5rem;
   position: fixed;
   bottom: 3vh;
   right: 2vw;
@@ -85,10 +85,11 @@ main {
   text-transform: uppercase;
   font-family: 'Roboto Mono', monospace;
   letter-spacing: 2px;
+  margin: 50px 0;
 }
 
 .button-large {
-  font-size: 1.3em;
+  font-size: 1.3rem;
   font-weight: bold;
 }
 
@@ -136,7 +137,7 @@ main {
 
 .section-heading {
   color: #ffffff;
-  font-size: 2em;
+  font-size: 2rem;
   letter-spacing: 3px;
   padding-bottom: 5px;
   border-bottom: 4px solid #de9e48;
@@ -192,6 +193,17 @@ main {
   margin-bottom: 50px;
 }
 
+.border-left {
+  border-left: 4px solid #de9e48;
+  padding-left: 10px;
+}
+
+.quote {
+  line-height: 2.2rem;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.2rem;
+}
+
 /* HOME SECTION */
 #home {
   width: 100vw;
@@ -201,7 +213,6 @@ main {
 }
 
 #home .button-default {
-  margin-top: 50px;
   display: inline-block;
 }
 
@@ -232,7 +243,7 @@ main {
 }
 
 #name {
-  font-size: 2.5em;
+  font-size: 2.5rem;
   margin-bottom: 0;
 }
 
@@ -242,7 +253,7 @@ main {
 }
 
 #cursor {
-  font-size: 1.25em;
+  font-size: 2rem;
   position: relative;
   right: 5px;
 }
@@ -257,7 +268,7 @@ main {
 }
 
 #social a {
-  font-size: 1.5em;
+  font-size: 1.5rem;
   margin-right: 10px;
   color: #de9e48;
 }
@@ -295,7 +306,7 @@ main {
 }
 
 #about-blurb {
-  font-size: 1.25em;
+  font-size: 1.25rem;
   line-height: 1.75;
   flex: 3;
   width: 100%;
@@ -307,12 +318,12 @@ main {
 
 #about-blurb h3 {
   color:#de9e48;
-  font-size: 2em;
+  font-size: 2rem;
   margin: 0;
 }
 
 #about .lead-in {
-  line-height: 1.25em;
+  line-height: 1.25rem;
 }
 
 /* RESUME SECTION */
@@ -353,10 +364,10 @@ main {
 #main-nav a {
   padding: 15px;
   display: inline-block;
-  font-size: 1.25em;
+  font-size: 1.25rem;
   border-radius: 50px;
   background-color: rgba(255, 255, 255, 0.9);
-  width: 1.25em;
+  width: 1.25rem;
   text-align: center;
   color: #563728;
   z-index: 110;
@@ -390,7 +401,7 @@ main {
 }
 
 #hide-menu {
-  font-size: 1.2em;
+  font-size: 1.2rem;
   position: relative;
   right: 10px;
   text-shadow: 0px 0px 5px #7a431c;
@@ -400,7 +411,7 @@ main {
   position: fixed;
   left: -30px;
   top: 40vh;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   text-shadow: 0px 0px 5px #7a431c;
 }
 
@@ -425,13 +436,13 @@ main {
   margin: 0;
   z-index: 100;
   text-align: center;
-  font-size: 1.25em;
+  font-size: 1.25rem;
   letter-spacing: 2px;
   padding-top: 15vh;
 }
 
 #mobile-nav h2 {
-  font-size: 2em;
+  font-size: 2rem;
   letter-spacing: 2px;
   color: #de9e48;
 }
@@ -454,7 +465,7 @@ main {
 }
 
 .nav-trigger {
-  font-size: 1.75em;
+  font-size: 1.75rem;
   position: fixed;
   top: 25px;
   right: 25px;
@@ -494,6 +505,10 @@ main {
   .lead-in {
     padding: 0 2vw;
   }
+
+  html {
+    font-size: 12px;
+  }
 }
 
 /* Tablets */
@@ -511,7 +526,7 @@ main {
   }
 
   #about-blurb {
-    padding: 0 10vw;
+    padding: 0 5vw;
   }
 
   .flex {

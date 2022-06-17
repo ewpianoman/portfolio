@@ -209,7 +209,7 @@ document.addEventListener('scroll', () => {
     hideMainMenuBtn.classList.add('hidden');
     showMainMenu();
   }
-})
+});
 
 // Set Up Visibility API
 let hidden, visibilityChange;
@@ -239,7 +239,7 @@ if (typeof document.addEventListener === "undefined" || hidden === undefined) {
   console.log("This demo requires a browser, such as Google Chrome or Firefox, that supports the Page Visibility API.");
 } else {
   // Handle page visibility change
-  document.addEventListener(visibilityChange, handleVisibilityChange, false);
+  document.addEventListener(visibilityChange, handleVisbilityChange, false);
 }
 
 // Set Up MAIN MENU Collapse Button
