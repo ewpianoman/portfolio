@@ -230,7 +230,7 @@ function handleVisbilityChange() {
     tabHidden = true;
   } else {
     tabHidden = false;
-    printJobs();
+    window.location.reload();
   }
 }
 
