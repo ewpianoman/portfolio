@@ -212,6 +212,19 @@ main {
   text-transform: uppercase;
 }
 
+.max-70 {
+  max-width: 70%;
+}
+
+.center-horizontally {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fixed-bg {
+  background-attachment: fixed;
+}
+
 /* HOME SECTION */
 #home {
   width: 100vw;
@@ -356,12 +369,88 @@ main {
   margin: 0 auto;
   min-height: 100vh;
   box-sizing: border-box;
+  padding-bottom: 100px;
+}
+
+#contact .section-heading {
+  margin-bottom: 75px;
+}
+
+#contact form {
+  font-size: 1.3rem;
+  font-family: 'Roboto Mono', monospace;
+  text-align: left;
+}
+
+#contact form input, #contact form textarea, #contact form select {
+  border-radius: 10px;
+  font-size: 1rem;
+  padding: 15px;
+  border: none;
+  font-family: 'Roboto Mono', monospace;
+}
+
+#contact form select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1em;
+}
+
+#contact form textarea.el-textarea__inner {
+  min-height: 150px !important;
+  height: 150px !important;
+}
+
+#contact form .cog-choice--radiobuttons {
+  margin-top: 25px;
+  text-align: center;
+}
+
+#contact form button {
+  background-color: #de9e48;
+  border-radius: 50px;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 50px;
+  text-transform: uppercase;
+  font-family: 'Roboto Mono', monospace;
+  letter-spacing: 2px;
+  border: none;
+  font-weight: bold;
+  font-size: 1.3rem;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+#contact form .cog-name__first {
+  margin-right: 6px;
+}
+
+#contact form .cog-name__last {
+  margin-left: 6px;
+}
+
+
+#contact form button:hover {
+  opacity: 0.8;
+  transition: opacity .5s;
+}
+
+#contact form .el-radio-group:hover,  #contact form .el-radio__input:hover, #contact form .el-radio:hover, #contact form .el-radio__inner:hover, #contact form .el-radio__original:hover, #contact form select:hover {
+  cursor: pointer !important;
+}
+
+.cog-abuse.cog-wrapper, .cog-branding.cog-branding--minimal {
+  display: none !important;
 }
 
 /* FOOTER */
 .credits {
   font-size: 1rem;
-  margin: 50px auto;
+  position: relative;
+  bottom: 30px;
 }
 
 /* MAIN NAVIGATION STYLES */
@@ -373,6 +462,7 @@ main {
   position: fixed;
   left: -10px;
   top: 25vh;
+  z-index: 5;
 }
 
 #main-nav a {
@@ -531,10 +621,6 @@ main {
 @media only screen and (max-width: 768px) {
   .mobile-hidden {
     display: none;
-  }
-
-  .lead-in {
-    font-size: 1rem;
   }
 
   #about-img-container {
