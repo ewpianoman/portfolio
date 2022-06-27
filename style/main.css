@@ -380,6 +380,7 @@ main {
   font-size: 1.3rem;
   font-family: 'Roboto Mono', monospace;
   text-align: left;
+  padding: 0 100px 0 125px;
 }
 
 #contact form input, #contact form textarea, #contact form select {
@@ -633,6 +634,35 @@ main {
 
   .flex {
     padding: 0 2vw;
+  }
+
+  #contact form .cog-row {
+    flex-direction: column;
+  }
+
+  #contact form {
+    padding: 0 75px 0 50px;
+  }
+
+  #contact form .cog-field, #contact form .cog-input {
+    width: 100%;
+  }
+
+  #contact form .cog-name__first {
+    margin-right: 0;
+    margin-bottom: 35px;
+  }
+  
+  #contact form .cog-name__last {
+    margin-left: 0;
+  }
+
+  #contact form .cog-input--long, #contact form .cog-col--12, #contact form .cog-col--24 {
+    flex: 1 1 auto !important;
+  }
+
+  #contact form .cog-row {
+    align-items: center;
   }
 }
 
