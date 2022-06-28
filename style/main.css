@@ -16,6 +16,30 @@ h1, h2, h3, h4, h5, h6, nav {
   font-family: 'Roboto Mono', monospace;
 }
 
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+}
+
+h5{
+  font-size: 1.2rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
 main {
   text-align: center;
 }
@@ -148,6 +172,44 @@ main {
   margin: 0 auto;
   max-width: 200px;
   margin-bottom: 100px;
+}
+
+.sub-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 75px 25px 75px;
+}
+
+.entry {
+  padding: 25px;
+  box-sizing: border-box;
+  margin: 15px;
+  width: 100%;
+  max-width: 350px;
+}
+
+.entry img {
+  width: 100%;
+  background-color: #fff;
+  padding-top: 5px;
+  box-sizing: border-box;
+  border-radius: 100%;
+  max-width: 250px;
+}
+
+.entry h4 {
+  margin-bottom: 10px;
+}
+
+.entry h5 {
+  margin: 10px auto 18px auto;
+}
+
+.entry h6 {
+  line-height: 2rem;
+  margin-top: 5px;
 }
 
 .lead-in {
