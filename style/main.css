@@ -14,6 +14,7 @@ body {
 
 h1, h2, h3, h4, h5, h6, nav {
   font-family: 'Roboto Mono', monospace;
+  letter-spacing: 1px;
 }
 
 h1 {
@@ -171,7 +172,7 @@ main {
   border-bottom: 4px solid #de9e48;
   margin: 0 auto;
   max-width: 200px;
-  margin-bottom: 100px;
+  margin-bottom: 75px;
 }
 
 .sub-section {
@@ -199,8 +200,20 @@ main {
   max-width: 250px;
 }
 
+.entry a img:hover {
+  border: 10px solid #de9e48;
+  transition: all .3s;
+}
+
+#resume h3 i {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
 .entry h4 {
   margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .entry h5 {
@@ -285,6 +298,10 @@ main {
 
 .fixed-bg {
   background-attachment: fixed;
+}
+
+.italic {
+  font-style: italic;
 }
 
 /* HOME SECTION */
@@ -677,6 +694,10 @@ main {
 
   html {
     font-size: 12px;
+  }
+
+  .entry {
+    padding: 10px;
   }
 }
 
