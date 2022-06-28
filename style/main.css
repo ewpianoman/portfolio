@@ -197,7 +197,7 @@ main {
   padding-top: 5px;
   box-sizing: border-box;
   border-radius: 100%;
-  max-width: 250px;
+  max-width: 200px;
 }
 
 .entry a img:hover {
@@ -302,6 +302,12 @@ main {
 
 .italic {
   font-style: italic;
+}
+
+.icon {
+  width: 1.5rem;
+  position: relative;
+  top: 3px;
 }
 
 /* HOME SECTION */
@@ -664,7 +670,7 @@ main {
 }
 
 .off-screen {
-  right: 200vh;
+  right: 200vw;
   transition: all .5s;
 }
 
