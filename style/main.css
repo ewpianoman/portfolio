@@ -117,12 +117,24 @@ main {
   margin: 50px 0;
 }
 
+.button-secondary {
+  background-color: #563728;
+  border-radius: 50px;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 12px 24px;
+  text-transform: uppercase;
+  font-family: 'Roboto Mono', monospace;
+  letter-spacing: 2px;
+  margin: 50px 0;
+}
+
 .button-large {
   font-size: 1.3rem;
   font-weight: bold;
 }
 
-.button-default:hover {
+.button-default:hover, .button-secondary:hover, .section-main-link:hover {
   opacity: .7;
   transition: opacity .3s;
 }
@@ -308,6 +320,11 @@ main {
   width: 1.5rem;
   position: relative;
   top: 3px;
+}
+
+.section-main-link {
+  position: relative;
+  bottom: 50px;
 }
 
 /* HOME SECTION */
