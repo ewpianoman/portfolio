@@ -351,6 +351,10 @@ main {
   z-index: 1000;
 }
 
+.modal:hover {
+  cursor: pointer;
+}
+
 .modal-content {
   background-color: #fff;
   width: 100vw;
