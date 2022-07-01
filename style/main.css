@@ -135,7 +135,7 @@ main {
   font-weight: bold;
 }
 
-.button-default:hover, .button-secondary:hover, .section-main-link:hover, a:hover {
+.button-default:hover, .button-secondary:hover, .section-main-link:hover, a:hover, .hover:hover {
   opacity: .7;
   transition: opacity .3s;
   cursor: pointer;
@@ -331,6 +331,42 @@ main {
 
 .decoration-none {
   text-decoration: none;
+}
+
+/* MODAL STYLES */
+.modal {
+  width: 100vw;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #fff;
+  width: 100vw;
+  height: 100vh;
+  max-width: 1000px;
+  max-height: 800px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.modal-close {
+  color: rgba(55, 44, 46, 1);
+  float: right;
+  font-size: 2rem;
+  padding: 25px;
 }
 
 /* HOME SECTION */
