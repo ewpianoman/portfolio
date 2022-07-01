@@ -294,6 +294,12 @@ document.querySelectorAll('.modal-open').forEach(item => {
   });
 });
 
+document.querySelector('.modal').addEventListener('click', (e) => {
+  if (e.target.tagName.toLowerCase() !== 'div') {
+    closeModal();
+  }
+});
+
 // Helper Functions
 function generateRandom(min = 0, max = 100) {
 
