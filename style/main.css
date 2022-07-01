@@ -115,6 +115,7 @@ main {
   font-family: 'Roboto Mono', monospace;
   letter-spacing: 2px;
   margin: 50px 0;
+  border: none;
 }
 
 .button-secondary {
@@ -134,9 +135,10 @@ main {
   font-weight: bold;
 }
 
-.button-default:hover, .button-secondary:hover, .section-main-link:hover {
+.button-default:hover, .button-secondary:hover, .section-main-link:hover, a:hover {
   opacity: .7;
   transition: opacity .3s;
+  cursor: pointer;
 }
 
 .inline-block {
@@ -325,6 +327,10 @@ main {
 .section-main-link {
   position: relative;
   bottom: 50px;
+}
+
+.decoration-none {
+  text-decoration: none;
 }
 
 /* HOME SECTION */
