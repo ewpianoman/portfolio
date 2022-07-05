@@ -1,0 +1,31 @@
+{
+    "iupui": {
+        "institution": "Indiana University-Purdue University Indianapolis",
+        "alias": "IUPUI",
+        "degree": "Master of Science",
+        "subject": "Music Technology",
+        "date": "2016",
+        "url": "https://et.iupui.edu/departments/mat/programs/mt/grad/msmt/",
+        "logo": "images/logos/iupui-logo.png",
+        "coursework": [
+            "Multimedia Design Applications",
+            "Principles of Multimedia Technology",
+            "Website Design for Musicians (HTML, CSS, & JavaScript)",
+            "Advanced Interactive Design Applications"
+        ]
+    },
+    "ocu": {
+        "institution": "Oakland City University",
+        "alias": "OCU",
+        "degree": "Bachelor of Arts",
+        "subject": "Music Education &amp; Piano Performance",
+        "date": "2014",
+        "url": "https://www.oak.edu/",
+        "logo": "images/logos/ocu-logo.png",
+        "coursework": [
+            "Graphic Design I",
+            "Web Design I",
+            "Media Production"
+        ]
+    }
+}

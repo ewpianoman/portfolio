@@ -1,0 +1,92 @@
+{
+    "frontline": {
+        "title": "Senior Client Support Analyst",
+        "employer": "Frontline Education",
+        "dates": "JUL 2022 - Present",
+        "url": "https://www.frontlineeducation.com/",
+        "logo": "images/logos/fontline-logo.png",
+        "details": []
+    },
+    "nextech": {
+        "title": "FACILITATOR &amp; INSTRUCTOR - CATAPULT SUMMER CODING BOOTCAMP",
+        "employer": "Nextech",
+        "dates": "JUN 2022 - JUL 2022",
+        "url": "https://nextech.org/students/catapult/",
+        "logo": "images/logos/nextech-logo.png",
+        "details": []
+    },
+    "princeton-hs": {
+        "title": "Business &amp; Computer Science Teacher",
+        "employer": "Princeton Community High School",
+        "dates": "AUG 2018 - JUL 2022",
+        "url": "https://www.ngsc.k12.in.us/pchs-home",
+        "logo": "images/logos/princeton-hs-logo.png",
+        "details": [
+            "Teach Intro to Computer Science, Computer Science 1 & 2, Information Technology Support, Graphic Design, Business Management, Accounting, Marketing, and Work-Based Learning",
+            "Founded FIRST Robotics Team and won Rookie All-Star, Rookie Inspiration, Highest Seeded Rookie Team, and qualified for state in our first year",
+            "Manage the repair of Chromebooks for the High School and Middle School",
+            "Implemented a ticketing system to track Chromebook Repairs"
+        ]
+    },
+    "pike-central-hs": {
+        "title": "Business &amp; Computer Science Teacher",
+        "employer": "Pike Central High School",
+        "dates": "AUG 2017 - JUL 2018",
+        "url": "https://pchs.pcsc.k12.in.us/",
+        "logo": "images/logos/pike-central-hs-logo.png",
+        "details": [
+            "Computer Science I",
+            "Interactive Media",
+            "Web Design",
+            "Economics",
+            "FIRST Robotics Competition Team (Lead Coach)"
+        ]
+    },
+    "schooltube": {
+        "title": "Director of Customer Success",
+        "employer": "SchoolTube",
+        "dates": "NOV 2016 - AUG 2017",
+        "url": "https://www.schooltube.com/",
+        "logo": "images/logos/schooltube-logo.png",
+        "details": [
+            "Perform sales demonstrations and calls.",
+            "Train new customers in the use of the technology platform.",
+            "Content marketing through blog posts.",
+            "Set up email marketing automation.",
+            "Provide tech support through online chat and phone calls.",
+            "Redesign company website.",
+            "Integrate tutorial system (Whatfix) inside web app."
+        ]
+    },
+    "collabra": {
+        "title": "Director of Customer Success",
+        "employer": "Collabra",
+        "dates": "JUL 2016 - AUG 2017",
+        "url": "https://collabramusic.com/",
+        "logo": "images/logos/collabra-logo.png",
+        "details": [
+            "Perform sales demonstrations and calls.",
+            "Train new customers in the use of the technology platform.",
+            "Content marketing through blog posts.",
+            "Set up email marketing automation.",
+            "Provide tech support through online chat and phone calls.",
+            "Redesign company website.",
+            "Integrate tutorial system (Whatfix) inside web app."
+        ]
+    },
+    "oakland-city-university": {
+        "title": "Administrative Assistant &amp; Lecturer",
+        "employer": "Oakland City University",
+        "dates": "JUL 2014 - JUL 2016",
+        "url": "https://www.oak.edu/",
+        "logo": "images/logos/ocu-logo.png",
+        "details": [
+            "Teach Web Design, Motion Graphics, Intro to Adobe Illustrator, Intro to Adobe Flash, Pop Music Theory, Fine Arts and the Modern World",
+            "Setup, Implementation, and Data Entry for a database to track Assessment Data",
+            "Prepare complex reports using SQL and Excel",
+            "Train key stakeholders on use of database",
+            "Manage office communications and day-to-day operations"
+
+        ]
+    }       
+}

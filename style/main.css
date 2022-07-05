@@ -349,10 +349,15 @@ main {
   margin: auto;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1000;
+  color:rgba(55, 44, 46, 1);
 }
 
 .modal:hover {
   cursor: pointer;
+}
+
+.modal-content:hover {
+  cursor: default;
 }
 
 .modal-content {
@@ -369,6 +374,7 @@ main {
   margin: auto;
   border-radius: 10px;
   box-shadow: 0, 0, 10px, #000;
+  box-sizing: border-box;
 }
 
 .modal-close {
@@ -376,6 +382,10 @@ main {
   float: right;
   font-size: 2rem;
   padding: 25px;
+}
+
+.modal-body {
+  padding: 20px 50px;
 }
 
 /* HOME SECTION */
