@@ -3,13 +3,7 @@ function closeModal() {
     modal.classList.add('hidden');
   }
   
-  function openModal(url) {
-    fetch(url)
-        .then(response => response.json())
-        .then(data => {
-            console.log(data);
-        })
-
+  function openModal() {
     const modal = document.querySelector('.modal');
     modal.classList.remove('hidden');
   }
@@ -21,14 +15,14 @@ function closeModal() {
   document.querySelectorAll('.modal-open-job').forEach(item => {
     item.addEventListener('click', (e) => {
       e.preventDefault();
-      openModal('data/jobs.json');
+      openModal();
     });
   });
   
   document.querySelectorAll('.modal-open-education').forEach(item => {
     item.addEventListener('click', (e) => {
       e.preventDefault();
-      openModal('data/education.json');
+      openModal();
     });
   });
 
