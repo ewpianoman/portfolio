@@ -66,6 +66,7 @@ main {
 /* UTILS */
 .hidden {
   visibility: hidden;
+  display: none;
 }
 
 .text-center {
@@ -616,6 +617,21 @@ main {
   font-size: 1rem;
   position: relative;
   bottom: 30px;
+}
+
+/* MODAL */
+.modal-content img {
+  width: 80%;
+  max-width: 200px;
+  margin: 0 auto;
+  display: block;
+  margin-top: 25px;
+}
+
+.details-list {
+  max-width: 750px;
+  width: 90%;
+  margin: 0 auto;
 }
 
 /* MAIN NAVIGATION STYLES */
