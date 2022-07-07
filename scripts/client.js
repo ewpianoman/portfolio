@@ -19,8 +19,8 @@ function blinkCursor(delay = 2000) {
     if (cursor.classList.contains('hidden')) {
       cursor.classList.remove('hidden');
     }
-    if (!cursorBlank.classList.contains('hidden')) {
-      cursorBlank.classList.add('hidden');
+    if (!blankCursor.classList.contains('hidden')) {
+      blankCursor.classList.add('hidden');
     }
   }, delay);
 
