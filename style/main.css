@@ -439,6 +439,7 @@ main {
   font-size: 2rem;
   position: relative;
   right: 5px;
+  bottom: 3px;
 }
 
 #jobTitleOutput, #cursor {
@@ -521,6 +522,119 @@ main {
   margin: 0 auto;
   min-height: 100vh;
   box-sizing: border-box;
+}
+
+/* Skills */
+.skill-section {
+  padding: 50px 0 30px 0;
+}
+
+.skill {
+  position: relative;
+  margin: 10px;
+}
+
+.outer {
+  height: 160px;
+  width: 160px;
+  border-radius: 50%;
+  border: 1px solid #de9e48;
+  box-sizing: border-box;
+  padding: 18px;
+  margin: 0 auto;
+}
+
+.inner {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  border: 1px solid #de9e48;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-circle {
+  fill: none;
+  stroke: #de9e48;
+  stroke-width: 20px;
+  stroke-dasharray: 435;
+  stroke-dashoffset: 435;
+}
+
+.skill-100 {
+  animation: skill100 2s linear forwards;
+}
+
+.skill-90 {
+  animation: skill90 1.8s linear forwards;
+}
+
+.skill-85 {
+  animation: skill85 1.7s linear forwards;
+}
+
+.skill-80 {
+  animation: skill80 1.6s linear forwards;
+}
+
+.skill-50 {
+  animation: skill50 1s linear forwards;
+}
+
+.skill-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.number h3 {
+  position: relative;
+  top: 20px;
+}
+
+.number h4 {
+  position: relative;
+  bottom: 15px;
+}
+
+.skill-title {
+  text-transform: uppercase;
+}
+
+.skill-detail {
+  position: relative;
+  bottom: 20px;
+}
+
+@keyframes skill100 {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes skill90 {
+  100% {
+    stroke-dashoffset: 43.5;
+  }
+}
+
+@keyframes skill85 {
+  100% {
+    stroke-dashoffset: 65.25;
+  }
+}
+
+@keyframes skill80 {
+  100% {
+    stroke-dashoffset: 87;
+  }
+}
+
+@keyframes skill50 {
+  100% {
+    stroke-dashoffset: 217.5;
+  }
 }
 
 /* PORTFOLIO SECTION */
@@ -885,5 +999,9 @@ main {
 
   .modal-content {
     max-height: 90vh;
+  }
+
+  .skill {
+    margin: 20px;
   }
 }

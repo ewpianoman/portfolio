@@ -294,3 +294,20 @@ function generateRandom(min = 0, max = 100) {
 
   return rand;
 }
+
+/* SKILL COUNTER */
+document.querySelectorAll('.number h4').forEach(item => {
+  let percent = item.dataset.percent;
+  let percentDecimal = percent * .01;
+  let interval = 18 * percentDecimal;
+  interval = 18 - interval;
+  let counter = 0;
+  setInterval(() => {
+    if (counter < percent) {
+      counter++;
+      item.innerHTML = counter + '%';
+    } else {
+      clearInterval();
+    }
+  }, 18);
+});
