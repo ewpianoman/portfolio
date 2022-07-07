@@ -4,6 +4,7 @@ let bublyGreetings = ['hiii', 'hello', 'hi hi', 'haayy', 'oh hi', 'heyo', 'ayyy'
 let jobClassList = ['dev-bg', 'design-bg', 'teaching-bg', 'music-bg'];
 const jobOutput = document.getElementById('jobTitleOutput');
 const cursor = document.getElementById('cursor');
+const blankCursor = document.getElementById('cursor-blank');
 let tabHidden = false;
 
 // DISPLAY JOB TITLES
@@ -11,11 +12,15 @@ let tabHidden = false;
 function blinkCursor(delay = 2000) {
   let blinkInterval = setInterval(() => {
     cursor.classList.toggle('hidden');
+    blankCursor.classList.toggle('hidden');
   }, 500);
   setTimeout(() => {
     clearInterval(blinkInterval);
     if (cursor.classList.contains('hidden')) {
       cursor.classList.remove('hidden');
+    }
+    if (!cursorBlank.classList.contains('hidden')) {
+      cursorBlank.classList.add('hidden');
     }
   }, delay);
 

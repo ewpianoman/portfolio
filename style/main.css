@@ -445,6 +445,11 @@ main {
 
 #jobTitleOutput, #cursor {
   color: #de9e48;
+  font-size: 2rem;
+}
+
+#cursor-blank {
+  padding: 0 1px;
 }
 
 #social {
@@ -623,15 +628,32 @@ main {
 .modal-content img {
   width: 80%;
   max-width: 200px;
-  margin: 0 auto;
   display: block;
-  margin-top: 25px;
+  margin: 25px auto;
 }
 
 .details-list {
   max-width: 750px;
   width: 90%;
   margin: 0 auto;
+}
+
+.job-title, .job-company {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.job-date {
+  margin: 20px 0;
+}
+
+.responsibilities {
+  font-size: 1.25rem;
+  line-height: 2rem;
+}
+
+.responsibilities li {
+  margin: 12px 0;
 }
 
 /* MAIN NAVIGATION STYLES */
