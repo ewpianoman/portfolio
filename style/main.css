@@ -566,6 +566,10 @@ main {
   animation: skill100 2s linear forwards;
 }
 
+.skill-95 {
+  animation: skill90 1.9s linear forwards;
+}
+
 .skill-90 {
   animation: skill90 1.8s linear forwards;
 }
