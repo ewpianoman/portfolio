@@ -1,5 +1,5 @@
 // Variables & Constants
-let jobList = ['Fullstack Web Developer.', 'Graphic Designer.', 'Teacher.', 'Musician.'];
+let jobList = ['Software Engineer.', 'Graphic Designer.', 'Teacher.', 'Musician.'];
 let bublyGreetings = ['hiii', 'hello', 'hi hi', 'haayy', 'oh hi', 'heyo', 'ayyy', 'aw hi', 'sup', 'hi u', 'yo', 'aloha', 'hi', 'hiya', 'psst'];
 let jobClassList = ['dev-bg', 'design-bg', 'teaching-bg', 'music-bg'];
 const jobOutput = document.getElementById('jobTitleOutput');
