@@ -21,8 +21,8 @@ export default function NavBar({ theme, onToggleTheme }: NavBarProps): JSX.Eleme
   ];
 
   const secondaryNavItems = [
-    { to: '/resume', label: 'Resume' },
-    { to: '/contact', label: 'Contact' },
+    { to: '/resume', label: 'Resume', title: 'View my resume' },
+    { to: '/contact', label: 'Contact', title: 'Get in touch with me' },
   ];
 
   const socialLinks = [
@@ -36,7 +36,7 @@ export default function NavBar({ theme, onToggleTheme }: NavBarProps): JSX.Eleme
     }`;
 
   const secondaryNavClasses = () =>
-    'inline-flex items-center rounded-md bg-primary px-3 py-1 text-white transition-colors hover:bg-primaryHover';
+    'inline-flex items-center bg-primary px-3 py-1 text-white transition-colors hover:bg-primaryHover';
 
   const socialLinkClasses = 'text-subtleText hover:text-primary';
 
@@ -86,12 +86,13 @@ export default function NavBar({ theme, onToggleTheme }: NavBarProps): JSX.Eleme
       </nav>
       <div className="nav-divider" />
       <div className="desktop-secondary-nav">
-        {secondaryNavItems.map(({ to, label }) => (
+        {secondaryNavItems.map(({ to, label, title }) => (
           <NavLink
             key={label}
             to={to}
             className={secondaryNavClasses}
             onClick={() => setMenuOpen(false)}
+            title={title}
           >
             {label}
           </NavLink>
@@ -113,7 +114,7 @@ export default function NavBar({ theme, onToggleTheme }: NavBarProps): JSX.Eleme
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen((current) => !current)}
         >
-          <span aria-hidden="true">{menuOpen ? '✕' : '☰'}</span>
+          <span aria-hidden="true">{!menuOpen && <i className="fa-solid fa-bars text-subtleText text-lg" />}</span>
         </button>
       </div>
       <div className={`mobile-menu${menuOpen ? ' open' : ''}`}>
@@ -132,7 +133,7 @@ export default function NavBar({ theme, onToggleTheme }: NavBarProps): JSX.Eleme
               aria-label="Close navigation menu"
               onClick={() => setMenuOpen(false)}
             >
-              <span aria-hidden="true">✕</span>
+              <span aria-hidden="true"><i className="fa-solid fa-xmark text-lg" /></span>
             </button>
           </div>
           <nav className="site-nav mobile-nav text-lg" aria-label="Mobile navigation">

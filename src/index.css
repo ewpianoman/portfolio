@@ -193,6 +193,7 @@ a {
   position: sticky;
   top: 0;
   z-index: 10;
+  transition: background-color 180ms ease-out, border-color 180ms ease-out, box-shadow 220ms ease-out;
 }
 
 .brand {
@@ -207,6 +208,11 @@ a {
   width: auto;
   height: clamp(2.4rem, 3.8vw, 3.05rem);
   color: #c8a165;
+  transition: transform 180ms ease-out, opacity 180ms ease-out;
+}
+
+.brand:hover .brand-signature {
+  transform: translateY(-0.5px);
 }
 
 html.theme-dark .brand-signature {
@@ -225,6 +231,16 @@ html.theme-dark .brand-signature {
   margin-left: auto;
 }
 
+.desktop-nav a,
+.mobile-nav a {
+  transition: color 180ms ease-out, border-color 180ms ease-out, transform 180ms ease-out;
+}
+
+.desktop-nav a:hover,
+.mobile-nav a:hover {
+  transform: translateY(-0.5px);
+}
+
 .nav-actions {
   display: flex;
   align-items: center;
@@ -235,6 +251,7 @@ html.theme-dark .brand-signature {
   width: 2px;
   height: 1.75rem;
   background: var(--border);
+  transition: background-color 180ms ease-out, opacity 180ms ease-out;
 }
 
 .desktop-secondary-nav {
@@ -249,6 +266,11 @@ html.theme-dark .brand-signature {
   justify-content: center;
   min-width: 1.5rem;
   min-height: 1.5rem;
+  transition: color 180ms ease-out, transform 180ms ease-out;
+}
+
+.desktop-secondary-nav a:hover {
+  transform: translateY(-0.5px);
 }
 
 .desktop-secondary-nav i {
@@ -264,6 +286,11 @@ html.theme-dark .brand-signature {
   font-size: 1.5rem;
   line-height: 1;
   cursor: pointer;
+  transition: color 180ms ease-out, transform 180ms ease-out;
+}
+
+.nav-toggle:hover {
+  transform: translateY(-0.5px);
 }
 
 .mobile-menu {
@@ -273,7 +300,7 @@ html.theme-dark .brand-signature {
   justify-content: flex-end;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.25s ease;
+  transition: opacity 200ms ease-out;
 }
 
 .mobile-menu.open {
@@ -287,6 +314,7 @@ html.theme-dark .brand-signature {
   border: 0;
   background: rgba(0, 0, 0, 0.35);
   cursor: pointer;
+  transition: background-color 200ms ease-out;
 }
 
 .mobile-menu-panel {
@@ -296,7 +324,7 @@ html.theme-dark .brand-signature {
   padding: var(--space-2xl);
   background: var(--surface);
   transform: translateX(100%);
-  transition: transform 0.3s ease;
+  transition: transform 280ms cubic-bezier(0.25, 0.8, 0.25, 1);
   display: flex;
   flex-direction: column;
   gap: var(--space-lg);
@@ -322,15 +350,17 @@ html.theme-dark .brand-signature {
   border: 1px solid var(--border);
   border-radius: 9999px;
   background: transparent;
-  color: var(--text);
+  color: var(--subtle-text);
   font-size: 1.25rem;
   line-height: 1;
   cursor: pointer;
+  transition: border-color 180ms ease-out, color 180ms ease-out, transform 180ms ease-out;
 }
 
 .mobile-menu-close:hover {
-  border-color: var(--primary);
-  color: var(--primary);
+  border-color: var(--primary) !important;
+  color: var(--primary) !important;
+  transform: translateY(-0.5px);
 }
 
 .mobile-nav {
@@ -377,6 +407,31 @@ html.theme-dark .brand-signature {
 .mobile-social-links i {
   font-size: inherit;
   line-height: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-header,
+  .brand-signature,
+  .desktop-nav a,
+  .mobile-nav a,
+  .desktop-secondary-nav a,
+  .nav-toggle,
+  .mobile-menu,
+  .mobile-menu-backdrop,
+  .mobile-menu-panel,
+  .mobile-menu-close,
+  .nav-divider {
+    transition: none;
+  }
+
+  .brand:hover .brand-signature,
+  .desktop-nav a:hover,
+  .mobile-nav a:hover,
+  .desktop-secondary-nav a:hover,
+  .nav-toggle:hover,
+  .mobile-menu-close:hover {
+    transform: none;
+  }
 }
 
 .site-nav a {
@@ -477,12 +532,16 @@ html.theme-dark .brand-signature {
 }
 
 @media (max-width: 640px) {
+  .site-header {
+    padding: clamp(1.2rem, 4.4vw, 1.45rem) var(--space-xl);
+  }
+
   .mobile-menu-panel {
     width: 100%;
   }
 
   .brand-signature {
-    height: clamp(1.9rem, 6.2vw, 2.35rem);
+    height: clamp(2.1rem, 7vw, 2.6rem);
   }
 
   .mobile-secondary-links {
