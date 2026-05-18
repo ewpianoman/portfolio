@@ -31,6 +31,7 @@ export default function NavBar({ theme, onToggleTheme }: NavBarProps): JSX.Eleme
 
   const navClasses = ({ isActive }: { isActive: boolean }) =>
     `${isActive ? 'text-primary' : 'text-subtleText'} hover:text-primary`;
+  const socialLinkClasses = 'text-subtleText hover:text-primary';
 
   return (
     <header className="site-header">
@@ -61,7 +62,7 @@ export default function NavBar({ theme, onToggleTheme }: NavBarProps): JSX.Eleme
           </NavLink>
         ))}
         {socialLinks.map(({ href, label, icon }) => (
-          <a key={label} href={href} title={label} className={navClasses} target="_blank" rel="noopener noreferrer">
+          <a key={label} href={href} title={label} className={socialLinkClasses} target="_blank" rel="noopener noreferrer">
             <i className={icon} />
           </a>
         ))}
@@ -134,7 +135,7 @@ export default function NavBar({ theme, onToggleTheme }: NavBarProps): JSX.Eleme
             ))}
             <div className="nav-divider" />
             {socialLinks.map(({ href, label, icon }) => (
-              <a key={label} href={href} title={label} className={navClasses} target="_blank" rel="noopener noreferrer">
+              <a key={label} href={href} title={label} className={socialLinkClasses} target="_blank" rel="noopener noreferrer">
                 <i className={icon} />
               </a>
             ))}

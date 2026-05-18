@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/components/footer.tsx","./src/components/navbar.tsx","./src/routes/about.tsx","./src/routes/contact.tsx","./src/routes/home.tsx","./src/routes/lab.tsx","./src/routes/resume.tsx","./src/routes/teaching.tsx","./src/routes/work.tsx","./src/routes/writing.tsx"],"version":"5.9.3"}
