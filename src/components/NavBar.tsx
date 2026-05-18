@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import signatureWordmark from '../../images/Eric Wilson Signatures SVG __.svg';
 
 type ThemeMode = 'light' | 'dark';
 
@@ -30,7 +31,7 @@ export default function NavBar({ theme, onToggleTheme }: NavBarProps): JSX.Eleme
   ];
 
   const mainNavClasses = ({ isActive }: { isActive: boolean }) =>
-    `border-b-2 pb-1 uppercase tracking-wide transition-colors ${
+    `inline-flex h-8 items-center border-b-2 uppercase tracking-wide transition-colors ${
       isActive ? 'border-primary !text-primary' : 'border-transparent text-subtleText hover:border-primary/40 hover:text-primary'
     }`;
 
@@ -67,7 +68,9 @@ export default function NavBar({ theme, onToggleTheme }: NavBarProps): JSX.Eleme
 
   return (
     <header className="site-header">
-      <div className="brand text-xl">Eric M. Wilson</div>
+      <NavLink to="/" className="brand" aria-label="Eric M. Wilson home">
+        <img src={signatureWordmark} alt="Eric M. Wilson signature" title="Eric M. Wilson" className="brand-signature" />
+      </NavLink>
       <nav className="site-nav desktop-nav" aria-label="Primary navigation">
         {mainNavItems.map(({ to, label, end }) => (
           <NavLink

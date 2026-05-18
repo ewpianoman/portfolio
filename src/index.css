@@ -187,7 +187,7 @@ a {
   align-items: center;
   justify-content: space-between;
   gap: var(--space-lg);
-  padding: var(--space-xl) var(--space-2xl);
+  padding: clamp(1.1rem, 2.2vw, 1.45rem) var(--space-2xl);
   border-bottom: 1px solid var(--border);
   background: var(--surface);
   position: sticky;
@@ -196,10 +196,21 @@ a {
 }
 
 .brand {
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: var(--font-size-h5);
-  line-height: var(--line-height-h5);
-  letter-spacing: 0.06em;
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
+  margin: -0.28rem 0;
+}
+
+.brand-signature {
+  display: block;
+  width: auto;
+  height: clamp(2.4rem, 3.8vw, 3.05rem);
+  color: #c8a165;
+}
+
+html.theme-dark .brand-signature {
+  color: #c8a165;
 }
 
 .site-nav {
@@ -369,6 +380,8 @@ a {
 }
 
 .site-nav a {
+  display: inline-flex;
+  align-items: center;
   font-size: inherit;
   line-height: inherit;
   font-weight: 500;
@@ -433,6 +446,11 @@ a {
 @media (max-width: 1024px) {
   .site-header {
     align-items: center;
+    padding: clamp(1rem, 2.35vw, 1.25rem) var(--space-xl);
+  }
+
+  .brand-signature {
+    height: clamp(2.15rem, 5.15vw, 2.65rem);
   }
 
   .desktop-nav {
@@ -461,6 +479,10 @@ a {
 @media (max-width: 640px) {
   .mobile-menu-panel {
     width: 100%;
+  }
+
+  .brand-signature {
+    height: clamp(1.9rem, 6.2vw, 2.35rem);
   }
 
   .mobile-secondary-links {
