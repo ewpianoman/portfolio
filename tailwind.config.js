@@ -1,0 +1,30 @@
+export default {
+  content: ['./index.html', './src/**/*.{js,jsx,ts,tsx}'],
+  theme: {
+    extend: {
+      colors: {
+        background: 'var(--background)',
+        surface: 'var(--surface)',
+        subtleSurface: 'var(--subtle-surface)',
+        text: 'var(--text)',
+        subtleText: 'var(--subtle-text)',
+        border: 'var(--border)',
+        primary: 'var(--primary)',
+        primaryHover: 'var(--primary-hover)',
+        secondary: 'var(--secondary)',
+        secondaryHover: 'var(--secondary-hover)',
+        info: 'var(--info)',
+        infoBorder: 'var(--info-border)',
+        warning: 'var(--warning)',
+        warningBorder: 'var(--warning-border)',
+        error: 'var(--error)',
+        errorBorder: 'var(--error-border)',
+        success: 'var(--success)',
+        successBorder: 'var(--success-border)',
+        link: 'var(--link)',
+        linkHover: 'var(--link-hover)',
+      },
+    },
+  },
+  plugins: [],
+};

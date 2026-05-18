@@ -1,6 +1,6 @@
-export default function About() {
+export default function About(): JSX.Element {
   return (
-    <section className="page-section page-about">
+    <section className="page-section page-about space-y-6">
       <h2>About</h2>
       <p>
         I’m a software engineer, designer, teacher, and musician who enjoys

@@ -5,9 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Eric M. Wilson | Portfolio</title>
     <meta name="description" content="Eric M. Wilson — software engineer, designer, teacher, and musician." />
+    <script>
+      (function () {
+        const savedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const useDark = savedTheme === 'dark' || (savedTheme === null && prefersDark);
+        if (useDark) {
+          document.documentElement.classList.add('theme-dark');
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
