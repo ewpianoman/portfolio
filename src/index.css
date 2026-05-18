@@ -24,6 +24,56 @@
   --success-border: #DCE6E3;
   --link: #6F87B3;
   --link-hover: #5B6F8E;
+  --radius-none: 0px;
+  --radius-small: 4px;
+  --radius-medium: 6px;
+  --radius-large: 8px;
+  --border-none: 0px;
+  --border-hair: 1px;
+  --border-thin: 2px;
+  --space-2xs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --font-size-h1: 40px;
+  --font-size-h2: 30px;
+  --font-size-h3: 22px;
+  --font-size-h4: 18px;
+  --font-size-h5: 16px;
+  --font-size-h6: 14px;
+  --font-size-body-large: 18px;
+  --font-size-body-base: 16px;
+  --font-size-body-small: 14px;
+  --font-size-meta: 12px;
+  --font-size-meta-small: 11px;
+  --font-size-link: 14px;
+  --font-size-code-inline: 14px;
+  --font-size-code-block: 14px;
+  --line-height-h1: 48px;
+  --line-height-h2: 38px;
+  --line-height-h3: 30px;
+  --line-height-h4: 26px;
+  --line-height-h5: 24px;
+  --line-height-h6: 20px;
+  --line-height-body-large: 30px;
+  --line-height-body-base: 26px;
+  --line-height-body-small: 22px;
+  --line-height-meta: 16px;
+  --line-height-meta-small: 14px;
+  --line-height-link: 20px;
+  --line-height-code-inline: 22px;
+  --line-height-code-block: 22px;
+  --font-weight-heading: 500;
+  --font-weight-body: 400;
+  --font-weight-meta: 500;
+  --font-weight-code: 400;
+  --layout-text: 720px;
+  --layout-wide: 960px;
+  --layout-max: 1200px;
 }
 
 html.theme-dark {
@@ -62,12 +112,56 @@ body,
 
 body {
   margin: 0;
-  line-height: 1.6;
+  line-height: var(--line-height-body-base);
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   background: radial-gradient(circle at top, rgba(56, 113, 214, 0.12), transparent 35%),
     radial-gradient(circle at 70% 10%, rgba(248, 250, 252, 0.08), transparent 20%),
     var(--background);
   color: var(--text);
+  font-size: var(--font-size-body-base);
+  font-weight: var(--font-weight-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: Fraunces, Georgia, serif;
+  font-weight: var(--font-weight-heading);
+  color: var(--text);
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  line-height: var(--line-height-h1);
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-h2);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+  line-height: var(--line-height-h3);
+}
+
+h4 {
+  font-size: var(--font-size-h4);
+  line-height: var(--line-height-h4);
+}
+
+h5 {
+  font-size: var(--font-size-h5);
+  line-height: var(--line-height-h5);
+}
+
+h6 {
+  font-size: var(--font-size-h6);
+  line-height: var(--line-height-h6);
 }
 
 a {
@@ -92,8 +186,8 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
-  padding: 1.5rem 2rem;
+  gap: var(--space-lg);
+  padding: var(--space-xl) var(--space-2xl);
   border-bottom: 1px solid var(--border);
   background: var(--surface);
   position: sticky;
@@ -102,18 +196,22 @@ a {
 }
 
 .brand {
-  font-weight: 700;
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: var(--font-size-h5);
+  line-height: var(--line-height-h5);
   letter-spacing: 0.06em;
 }
 
 .site-nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: var(--space-md);
 }
 
 .site-nav a {
   color: var(--subtle-text);
+  font-size: var(--font-size-link);
+  line-height: var(--line-height-link);
   font-weight: 500;
 }
 
@@ -123,31 +221,35 @@ a {
 
 .app-content {
   flex: 1;
-  padding: 2rem;
-  max-width: 1080px;
-  width: min(100%, 1080px);
+  padding: 0 var(--space-2xl);
+  max-width: var(--layout-max);
+  width: 100%;
   margin: 0 auto;
 }
 
 .page-section {
-  padding: 3rem 0;
+  padding: var(--space-2xl) 0;
 }
 
 .page-section h2 {
   margin-top: 0;
-  font-size: clamp(2.25rem, 2vw, 3rem);
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-h2);
+  font-weight: var(--font-weight-heading);
 }
 
 .page-section p {
   max-width: 42rem;
-  margin: 1rem 0 0;
+  margin-top: var(--space-sm);
   color: var(--subtle-text);
+  font-size: var(--font-size-body-base);
+  line-height: var(--line-height-body-base);
 }
 
 .hero-card {
-  padding: 3rem;
-  border: 1px solid var(--border);
-  border-radius: 24px;
+  padding: var(--space-2xl);
+  border: var(--border-thin) solid var(--border);
+  border-radius: var(--radius-large);
   background: var(--surface);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.24);
 }
@@ -156,16 +258,18 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-top: 1.5rem;
-  padding: 0.95rem 1.5rem;
-  border-radius: 999px;
+  margin-top: var(--space-lg);
+  padding: var(--space-xl) var(--space-2xl);
+  border-radius: var(--radius-large);
   background: var(--primary);
   color: var(--background);
+  font-size: var(--font-size-link);
+  line-height: var(--line-height-link);
   font-weight: 600;
 }
 
 .site-footer {
-  padding: 1.5rem 2rem;
+  padding: var(--space-xl) var(--space-2xl);
   text-align: center;
   border-top: 1px solid var(--border);
   background: var(--surface);
