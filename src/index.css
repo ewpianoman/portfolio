@@ -208,6 +208,123 @@ a {
   gap: var(--space-md);
 }
 
+.desktop-nav {
+  margin-left: auto;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.nav-divider {
+  width: 1px;
+  height: 1.5rem;
+  background: var(--border);
+}
+
+.desktop-secondary-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.desktop-secondary-nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+}
+
+.desktop-secondary-nav i {
+  font-size: inherit;
+  line-height: 1;
+}
+
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--text);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: flex-end;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.mobile-menu.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-menu-backdrop {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  background: rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+}
+
+.mobile-menu-panel {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  padding: var(--space-2xl);
+  background: var(--surface);
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.mobile-menu.open .mobile-menu-panel {
+  transform: translateX(0);
+}
+
+.mobile-nav {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-xl);
+  margin-top: var(--space-2xl);
+}
+
+.mobile-nav a {
+  width: 100%;
+  padding: var(--space-sm) 0;
+}
+
+.mobile-secondary-nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-top: auto;
+  padding-top: var(--space-2xl);
+  border-top: 1px solid var(--border);
+}
+
+.mobile-secondary-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.mobile-secondary-nav i {
+  font-size: inherit;
+  line-height: 1;
+}
+
 .site-nav a {
   color: var(--subtle-text);
   font-size: var(--font-size-link);
@@ -277,11 +394,19 @@ a {
 
 @media (max-width: 720px) {
   .site-header {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
   }
 
-  .site-nav {
+  .desktop-nav {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  .nav-actions {
     width: 100%;
     justify-content: space-between;
   }

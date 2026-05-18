@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
 type ThemeMode = 'light' | 'dark';
@@ -8,33 +9,138 @@ type NavBarProps = {
 };
 
 export default function NavBar({ theme, onToggleTheme }: NavBarProps): JSX.Element {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const mainNavItems = [
+    { to: '/', label: 'Home', end: true },
+    { to: '/work', label: 'Work' },
+    { to: '/writing', label: 'Writing' },
+    { to: '/teaching', label: 'Teaching' },
+    { to: '/about', label: 'About' },
+  ];
+
+  const secondaryNavItems = [
+    { to: '/resume', label: 'Resume' },
+    { to: '/contact', label: 'Contact' },
+  ];
+
+  const socialLinks = [
+    { href: 'https://linkedin.com', label: 'LinkedIn', icon: 'fab fa-linkedin' },
+    { href: 'https://github.com', label: 'Github', icon: 'fab fa-github' },
+  ];
+
   const navClasses = ({ isActive }: { isActive: boolean }) =>
     `${isActive ? 'text-primary' : 'text-subtleText'} hover:text-primary`;
 
   return (
     <header className="site-header">
       <div className="brand text-xl">Eric M. Wilson</div>
-      <nav className="site-nav text-sm">
-        <NavLink to="/" end className={navClasses}>
-          Home
-        </NavLink>
-        <NavLink to="/about" className={navClasses}>
-          About
-        </NavLink>
-        <NavLink to="/work" className={navClasses}>
-          Work
-        </NavLink>
-        <NavLink to="/contact" className={navClasses}>
-          Contact
-        </NavLink>
+      <nav className="site-nav desktop-nav text-sm" aria-label="Primary navigation">
+        {mainNavItems.map(({ to, label, end }) => (
+          <NavLink
+            key={label}
+            to={to}
+            end={end}
+            className={navClasses}
+            onClick={() => setMenuOpen(false)}
+          >
+            {label}
+          </NavLink>
+        ))}
       </nav>
-      <button
-        type="button"
-        onClick={onToggleTheme}
-        className="rounded-full border border-border bg-surface px-4 py-2 text-sm text-text transition hover:border-primary hover:text-primary"
-      >
-        {theme === 'dark' ? 'Light mode' : 'Dark mode'}
-      </button>
+      <div className="nav-divider" />
+      <div className="desktop-secondary-nav">
+        {secondaryNavItems.map(({ to, label }) => (
+          <NavLink
+            key={label}
+            to={to}
+            className={navClasses}
+            onClick={() => setMenuOpen(false)}
+          >
+            {label}
+          </NavLink>
+        ))}
+        {socialLinks.map(({ href, label, icon }) => (
+          <a key={label} href={href} title={label} className={navClasses} target="_blank" rel="noopener noreferrer">
+            <i className={icon} />
+          </a>
+        ))}
+      </div>
+      <div className="nav-actions">
+        <button
+          type="button"
+          onClick={onToggleTheme}
+          className={`relative inline-flex h-7 w-14 items-center rounded-full border border-border px-0.5 transition focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background ${
+            theme === 'dark' ? 'bg-text/10' : 'bg-surface'
+          }`}
+          aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+          aria-pressed={theme === 'dark'}
+          title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+        >
+          <span className="flex w-full items-center justify-between px-1 text-sm text-subtleText" aria-hidden="true">
+            <i className="fa-solid fa-sun" />
+            <i className="fa-solid fa-moon" />
+          </span>
+          <span
+            className={`absolute top-0.5 flex h-6 w-6 items-center justify-center rounded-full bg-primary text-sm text-white shadow-sm transition-transform ${
+              theme === 'dark' ? 'translate-x-7' : 'translate-x-0'
+            }`}
+            aria-hidden="true"
+          >
+            <i className={`fa-solid ${theme === 'dark' ? 'fa-moon' : 'fa-sun'}`} />
+          </span>
+        </button>
+        <button
+          type="button"
+          className="nav-toggle"
+          aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+          aria-expanded={menuOpen}
+          onClick={() => setMenuOpen((current) => !current)}
+        >
+          <span aria-hidden="true">{menuOpen ? '✕' : '☰'}</span>
+        </button>
+      </div>
+      <div className={`mobile-menu${menuOpen ? ' open' : ''}`}>
+        <button
+          type="button"
+          className="mobile-menu-backdrop"
+          aria-hidden="true"
+          onClick={() => setMenuOpen(false)}
+        />
+        <div className="mobile-menu-panel">
+          <nav className="site-nav mobile-nav text-lg" aria-label="Mobile navigation">
+            {mainNavItems.map(({ to, label, end }) => (
+              <NavLink
+                key={label}
+                to={to}
+                end={end}
+                className={navClasses}
+                onClick={() => setMenuOpen(false)}
+              >
+                {label}
+              </NavLink>
+            ))}
+          </nav>
+          <div className="mobile-secondary-nav">
+            {secondaryNavItems.map(({ to, label }) => (
+              <NavLink
+                key={label}
+                to={to}
+                className={navClasses}
+                onClick={() => setMenuOpen(false)}
+              >
+                {label}
+              </NavLink>
+            ))}
+            <div className="nav-divider" />
+            {socialLinks.map(({ href, label, icon }) => (
+              <a key={label} href={href} title={label} className={navClasses} target="_blank" rel="noopener noreferrer">
+                <i className={icon} />
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
     </header>
   );
 }
