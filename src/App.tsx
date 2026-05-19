@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import Footer from './components/Footer';
 import NavBar from './components/NavBar';
+import ScrollOverlay from './components/ScrollOverlay';
 
 type ThemeMode = 'light' | 'dark';
 
@@ -32,6 +33,7 @@ export default function App(): JSX.Element {
   }, [theme]);
   return (
     <div className="app-shell min-h-screen bg-background text-text">
+      <ScrollOverlay />
       <NavBar theme={theme} onToggleTheme={() => setTheme(theme === 'dark' ? 'light' : 'dark')} />
       <main className="app-content">
         <Outlet />
