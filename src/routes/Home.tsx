@@ -1,12 +1,20 @@
 export default function Home(): JSX.Element {
   return (
     <section className="page-section page-home">
-      <div className="hero-card rounded-[1.5rem] border border-border bg-surface p-10 shadow-xl shadow-black/20">
-        <h1>Hi, I’m Eric.</h1>
-        <p>
-          I design and build thoughtful web experiences for modern audiences.
-          This portfolio is the starting point for a redesigned React-based site.
-        </p>
+      <div className='hero-text-block'>
+        <div>
+          <p className="hero-tagline">Builder  &middot; Musician &middot; Educator &middot; Writer &middot; Thinker</p>
+        </div>
+        <div>
+          <h1 className="hero-headline">Music.</h1>
+          <h1 className="hero-headline hero-headline-emphasis">Code.</h1>
+          <h1 className="hero-headline">Teaching.</h1>
+        </div>
+        <div>
+          <p className="hero-description">
+            Hi, I'm Eric! I work at the intersection of music, education, and technology — building tools, writing, performing, and teaching toward a future where learning music is more accessible and more human.
+          </p>
+        </div>
       </div>
     </section>
   );

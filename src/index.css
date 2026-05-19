@@ -39,34 +39,34 @@
   --space-xl: 32px;
   --space-2xl: 48px;
   --space-3xl: 64px;
-  --font-size-h1: 40px;
-  --font-size-h2: 30px;
-  --font-size-h3: 22px;
-  --font-size-h4: 18px;
-  --font-size-h5: 16px;
-  --font-size-h6: 14px;
-  --font-size-body-large: 18px;
-  --font-size-body-base: 16px;
-  --font-size-body-small: 14px;
-  --font-size-meta: 12px;
-  --font-size-meta-small: 11px;
-  --font-size-link: 14px;
-  --font-size-code-inline: 14px;
-  --font-size-code-block: 14px;
-  --line-height-h1: 48px;
-  --line-height-h2: 38px;
-  --line-height-h3: 30px;
-  --line-height-h4: 26px;
-  --line-height-h5: 24px;
-  --line-height-h6: 20px;
-  --line-height-body-large: 30px;
-  --line-height-body-base: 26px;
-  --line-height-body-small: 22px;
-  --line-height-meta: 16px;
-  --line-height-meta-small: 14px;
-  --line-height-link: 20px;
-  --line-height-code-inline: 22px;
-  --line-height-code-block: 22px;
+  --font-size-h1: clamp(2.125rem, 1.65rem + 1.55vw, 2.5rem);
+  --font-size-h2: clamp(1.625rem, 1.35rem + 0.9vw, 1.875rem);
+  --font-size-h3: clamp(1.25rem, 1.1rem + 0.5vw, 1.375rem);
+  --font-size-h4: clamp(1.05rem, 1rem + 0.2vw, 1.125rem);
+  --font-size-h5: clamp(0.95rem, 0.925rem + 0.1vw, 1rem);
+  --font-size-h6: clamp(0.85rem, 0.825rem + 0.1vw, 0.875rem);
+  --font-size-body-large: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  --font-size-body-base: clamp(0.95rem, 0.915rem + 0.2vw, 1rem);
+  --font-size-body-small: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);
+  --font-size-meta: clamp(0.7rem, 0.68rem + 0.08vw, 0.75rem);
+  --font-size-meta-small: clamp(0.65rem, 0.635rem + 0.06vw, 0.6875rem);
+  --font-size-link: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);
+  --font-size-code-inline: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);
+  --font-size-code-block: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);
+  --line-height-h1: clamp(2.5rem, 2.15rem + 1.2vw, 3rem);
+  --line-height-h2: clamp(2rem, 1.75rem + 0.8vw, 2.375rem);
+  --line-height-h3: clamp(1.75rem, 1.6rem + 0.5vw, 1.875rem);
+  --line-height-h4: clamp(1.5rem, 1.42rem + 0.25vw, 1.625rem);
+  --line-height-h5: clamp(1.4rem, 1.35rem + 0.2vw, 1.5rem);
+  --line-height-h6: clamp(1.2rem, 1.15rem + 0.15vw, 1.25rem);
+  --line-height-body-large: clamp(1.65rem, 1.55rem + 0.35vw, 1.875rem);
+  --line-height-body-base: clamp(1.5rem, 1.42rem + 0.25vw, 1.625rem);
+  --line-height-body-small: clamp(1.3rem, 1.25rem + 0.2vw, 1.375rem);
+  --line-height-meta: clamp(0.95rem, 0.92rem + 0.12vw, 1rem);
+  --line-height-meta-small: clamp(0.85rem, 0.82rem + 0.1vw, 0.875rem);
+  --line-height-link: clamp(1.15rem, 1.12rem + 0.12vw, 1.25rem);
+  --line-height-code-inline: clamp(1.3rem, 1.25rem + 0.2vw, 1.375rem);
+  --line-height-code-block: clamp(1.3rem, 1.25rem + 0.2vw, 1.375rem);
   --font-weight-heading: 500;
   --font-weight-body: 400;
   --font-weight-meta: 500;
@@ -756,4 +756,38 @@ html.theme-dark .brand-signature {
     gap: var(--space-xs);
     text-align: center;
   }
+}
+
+/* HERO SECTION */
+.hero-text-block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.hero-tagline {
+  font-size: var(--font-size-body-small);
+  color: var(--secondary) !important;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.hero-headline {
+  font-size: var(--font-size-h1);
+  line-height: var(--line-height-h1);
+  font-weight: var(--font-weight-heading);
+  color: var(--text);
+  margin: 0;
+}
+
+.hero-headline-emphasis {
+  color: var(--primary);
+  font-style: italic;
+}
+
+.hero-description {
+  color: var(--subtle-text);
+  font-size: var(--font-size-body-base);
+  line-height: var(--line-height-body-base);
 }

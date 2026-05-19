@@ -27,7 +27,7 @@ export default function Footer(): JSX.Element {
           <div className="footer-brand">
             <span className="footer-eyebrow">Eric Wilson</span>
             <img src={signatureWordmark} alt="Eric M. Wilson signature" className="footer-signature" />
-            <p className="footer-tagline">Builder &middot; Musician &middot; Educator &middot; Writer</p>
+            <p className="footer-tagline">Builder &middot; Musician &middot; Educator &middot; Writer &middot; Thinker</p>
             <div className="footer-actions">
               {footerActions.map(({ to, label }) => (
                 <NavLink key={label} to={to} className="footer-action-button">
