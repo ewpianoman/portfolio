@@ -585,7 +585,7 @@ html.theme-dark .brand-signature {
   --primary-hover: #A5B6D6;
   --text-ghost: rgba(255, 255, 255, 0.35);
   color-scheme: dark;
-  background: var(--background);
+  background: var(--surface);
   color: var(--text);
   border-top: 1px solid var(--border);
 }

@@ -10,12 +10,18 @@ import Lab from './routes/Lab';
 import Writing from './routes/Writing';
 import Teaching from './routes/Teaching';
 import Resume from './routes/Resume';
+import NotFound from './routes/NotFound';
+import RouteErrorBoundary from './routes/RouteErrorBoundary';
+import ErrorTest from './routes/ErrorTest';
 import './index.css';
+
+const devOnlyRoutes = import.meta.env.DEV ? [{ path: '__error-test', element: <ErrorTest /> }] : [];
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
+    errorElement: <RouteErrorBoundary />,
     children: [
       { index: true, element: <Home /> },
       { path: 'about', element: <About /> },
@@ -25,6 +31,8 @@ const router = createBrowserRouter([
       { path: 'teaching', element: <Teaching /> },
       { path: 'resume', element: <Resume /> },
       { path: 'contact', element: <Contact /> },
+      ...devOnlyRoutes,
+      { path: '*', element: <NotFound /> },
     ],
   },
 ]);
