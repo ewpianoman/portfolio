@@ -271,7 +271,7 @@ a {
   gap: var(--space-lg);
   padding: clamp(1.1rem, 2.2vw, 1.45rem) var(--space-2xl);
   border-bottom: 1px solid var(--border);
-  background: var(--surface);
+  background: var(--subtle-surface);
   position: sticky;
   top: 0;
   z-index: 10;
@@ -574,18 +574,7 @@ html.theme-dark .brand-signature {
 }
 
 .site-footer {
-  /* Always dark */
-  --background: #0E1116;
-  --surface: #141821;
-  --subtle-surface: #111621;
-  --text: #E6E8EC;
-  --subtle-text: #A0A6AF;
-  --border: #2A2F3A;
-  --primary: #8FA2C8;
-  --primary-hover: #A5B6D6;
-  --text-ghost: rgba(255, 255, 255, 0.35);
-  color-scheme: dark;
-  background: var(--surface);
+  background: var(--subtle-surface);
   color: var(--text);
   border-top: 1px solid var(--border);
 }
