@@ -628,7 +628,7 @@ html.theme-dark .brand-signature {
   justify-content: center;
   min-width: 6.5rem;
   padding: 0.55rem 0.95rem;
-  border-radius: var(--radius-medium);
+  border-radius: var(--radius-small);
   background: var(--primary);
   color: #ffffff;
   font-size: var(--font-size-body-small);
