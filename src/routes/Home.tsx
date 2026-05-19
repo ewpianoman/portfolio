@@ -1,6 +1,7 @@
 export default function Home(): JSX.Element {
   return (
     <section className="page-section page-home">
+      <div className="absolute inset-0 bg-black/20" aria-hidden="true" />
       <div className='hero-text-block'>
         <div>
           <p className="hero-tagline">Builder  &middot; Musician &middot; Educator &middot; Writer &middot; Thinker</p>
