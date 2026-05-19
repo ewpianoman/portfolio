@@ -36,7 +36,7 @@ export default function NavBar({ theme, onToggleTheme }: NavBarProps): JSX.Eleme
     }`;
 
   const secondaryNavClasses = () =>
-    'inline-flex items-center bg-primary px-3 py-1 text-white transition-colors hover:bg-primaryHover';
+    'inline-flex items-center rounded-sm bg-primary px-3 py-1 text-white transition-colors hover:bg-primaryHover';
 
   const socialLinkClasses = 'text-subtleText hover:text-primary';
 
