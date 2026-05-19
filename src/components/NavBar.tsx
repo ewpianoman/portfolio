@@ -44,7 +44,7 @@ export default function NavBar({ theme, onToggleTheme }: NavBarProps): JSX.Eleme
     <button
       type="button"
       onClick={onToggleTheme}
-      className={`relative inline-flex h-7 w-14 items-center rounded-full border border-border px-0.5 transition focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background ${
+      className={`relative inline-flex h-7 w-14 items-center overflow-hidden rounded-full border border-border px-0.5 transition focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background ${
         theme === 'dark' ? 'bg-text/10' : 'bg-surface'
       } ${extraClasses}`}
       aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
@@ -56,8 +56,8 @@ export default function NavBar({ theme, onToggleTheme }: NavBarProps): JSX.Eleme
         <i className="fa-solid fa-moon" />
       </span>
       <span
-        className={`absolute top-0.5 flex h-6 w-6 items-center justify-center rounded-full bg-primary text-sm text-white shadow-sm transition-transform ${
-          theme === 'dark' ? 'translate-x-7' : 'translate-x-0'
+        className={`absolute top-0.5 flex h-[22px] w-[22px] items-center justify-center rounded-full bg-primary text-sm text-white shadow-sm transition-transform ${
+          theme === 'dark' ? 'translate-x-[28px]' : 'translate-x-0'
         }`}
         aria-hidden="true"
       >
