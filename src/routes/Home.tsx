@@ -7,7 +7,7 @@ export default function Home(): JSX.Element {
         <div className="hero-layout">
           <div className="hero-text-block">
             <div>
-              <p className="hero-tagline">Builder  &middot; Musician &middot; Educator &middot; Writer &middot; Thinker</p>
+              <p className="hero-tagline"><span className="hero-tagline-emphasis">Musician.</span> Building at the intersection of music, education, and technology.</p>
             </div>
             <div>
               <h1 className="hero-headline">Music.</h1>
@@ -16,8 +16,9 @@ export default function Home(): JSX.Element {
             </div>
             <div>
               <p className="hero-description">
-                Hi, I'm Eric! I work at the intersection of music, education, and technology. I'm building tools, writing, performing, and teaching toward a future where learning music is more accessible and human.
+                I’m Eric. I work at the intersection of music, education, and technology. My work is informed by real-world teaching and product experience. I build tools, write, perform, and teach to make learning music more accessible and human.
               </p>
+              <p className="hero-audience">For educators, builders, and anyone thinking about the future of music learning.</p>
             </div>
             <div className="hero-actions">
               <Link to="/work" className="hero-primary-button">
