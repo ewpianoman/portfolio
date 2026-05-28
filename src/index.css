@@ -811,6 +811,7 @@ html.theme-dark .brand-signature {
   object-fit: cover;
   object-position: center top;
   display: block;
+  filter: hue-rotate(-15deg) saturate(0.75) brightness(.95);
 }
 
 .hero-tagline {
