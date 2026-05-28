@@ -36,27 +36,27 @@ export default function Home(): JSX.Element {
         </div>
       </section>
 
-      <section className="social-proof-section" aria-label="Social proof">
-        <div className="social-proof-grid">
-          <article className="social-proof-item">
-            <i className="fa-solid fa-circle-check social-proof-icon" aria-hidden="true" />
-            <h3 className="social-proof-title">Placeholder Result</h3>
-            <p className="social-proof-subtitle">Add a short supporting metric here.</p>
+      <section className="credentials-section" aria-label="Credentials">
+        <div className="credentials-grid">
+          <article className="credentials-item">
+            <i className="fa-solid fa-graduation-cap credentials-icon" aria-hidden="true" />
+            <h3 className="credentials-title">M.S. Music Technology</h3>
+            <p className="credentials-subtitle">Music · Technology · Multimedia</p>
           </article>
-          <article className="social-proof-item">
-            <i className="fa-solid fa-circle-check social-proof-icon" aria-hidden="true" />
-            <h3 className="social-proof-title">Placeholder Result</h3>
-            <p className="social-proof-subtitle">Add a short supporting metric here.</p>
+          <article className="credentials-item">
+            <i className="fa-solid fa-code credentials-icon" aria-hidden="true" />
+            <h3 className="credentials-title">Software Engineer</h3>
+            <p className="credentials-subtitle">Cloud apps & user-facing systems</p>
           </article>
-          <article className="social-proof-item">
-            <i className="fa-solid fa-circle-check social-proof-icon" aria-hidden="true" />
-            <h3 className="social-proof-title">Placeholder Result</h3>
-            <p className="social-proof-subtitle">Add a short supporting metric here.</p>
+          <article className="credentials-item">
+            <i className="fa-solid fa-layer-group credentials-icon" aria-hidden="true" />
+            <h3 className="credentials-title">Product & UI/UX</h3>
+            <p className="credentials-subtitle">Design-led product development</p>
           </article>
-          <article className="social-proof-item">
-            <i className="fa-solid fa-circle-check social-proof-icon" aria-hidden="true" />
-            <h3 className="social-proof-title">Placeholder Result</h3>
-            <p className="social-proof-subtitle">Add a short supporting metric here.</p>
+          <article className="credentials-item">
+            <i className="fa-solid fa-music credentials-icon" aria-hidden="true" />
+            <h3 className="credentials-title">Pianist & Educator</h3>
+            <p className="credentials-subtitle">15+ years teaching & performing</p>
           </article>
         </div>
       </section>
