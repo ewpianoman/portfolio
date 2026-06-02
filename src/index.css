@@ -1045,18 +1045,18 @@ html.theme-dark .brand-signature {
 
 /* Work Preview Section */
 .work-preview-section {
-  width: calc(100% - 24px);
-  margin-left: auto;
-  margin-right: auto;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
   padding-top: var(--space-3xl);
   padding-bottom: var(--space-3xl);
   background: var(--background);
 }
 
 .work-preview-grid {
-  width: 100%;
-  margin-left: 0;
-  margin-right: 0;
+  width: calc(100vw - 200px);
+  margin-left: auto;
+  margin-right: auto;
   margin-top: var(--space-3xl);
   margin-bottom: 0;
   display: grid;
@@ -1183,11 +1183,8 @@ html.theme-dark .brand-signature {
 }
 
 @media (max-width: 960px) {
-  .work-preview-section {
-    width: calc(100% - 16px);
-  }
-
   .work-preview-grid {
+    width: calc(100vw - 24px);
     grid-template-columns: 1fr;
     margin-top: var(--space-2xl);
     border-left: 1px solid var(--border);
