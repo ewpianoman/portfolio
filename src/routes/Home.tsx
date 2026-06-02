@@ -69,35 +69,35 @@ export default function Home(): JSX.Element {
             <div className="work-preview-meta">Performer · Arranger</div>
             <h3 className="work-preview-title">Music</h3>
             <p className="work-preview-description">I perform, record, and arrange piano music across jazz, gospel, classical, and blues. My album Hymns at the Piano is available on major streaming platforms.</p>
-            <button className="work-preview-cta">Listen</button>
+            <a href="https://open.spotify.com/album/6bEVIB7IQoRy5R3zJN9ltM" className="work-preview-cta" target="_blank" rel="noopener noreferrer">Listen</a>
           </article>
 
           <article className="work-preview-item">
             <div className="work-preview-meta">Essays · Ideas</div>
             <h3 className="work-preview-title">Writing</h3>
             <p className="work-preview-description">I write about music education, technology, and the challenge of building meaningful work across disciplines. Essays and longer reflections are in progress.</p>
-            <button className="work-preview-cta">Read Essays</button>
+            <Link to="/writing" className="work-preview-cta">Read Essays</Link>
           </article>
 
           <article className="work-preview-item">
             <div className="work-preview-meta">Instruction · Curriculum</div>
             <h3 className="work-preview-title">Piano Studio</h3>
             <p className="work-preview-description">I’ve taught piano privately for over 15 years, working with students of all ages and levels in Southern Illinois and online.</p>
-            <button className="work-preview-cta">Book a Lesson</button>
+            <a href="https://wilsonpianostudio.com/" className="work-preview-cta" target="_blank" rel="noopener noreferrer">Book a Lesson</a>
           </article>
 
           <article className="work-preview-item">
             <div className="work-preview-meta">Engineering · Open Source</div>
             <h3 className="work-preview-title">Tech Work</h3>
             <p className="work-preview-description">I’m a software engineer building healthcare products and exploring what better tools for music education and creative work could look like.</p>
-            <button className="work-preview-cta">View Projects</button>
+            <Link to="/work" className="work-preview-cta">View Projects</Link>
           </article>
 
           <article className="work-preview-item">
             <div className="work-preview-meta">Talks · Courses · Coaching</div>
             <h3 className="work-preview-title">Speaking</h3>
             <p className="work-preview-description">I’m available for conferences, panels, podcasts, and workshops focused on music education, technology, and the future of learning.</p>
-            <button className="work-preview-cta">Inquire</button>
+            <Link to="/contact" className="work-preview-cta">Inquire</Link>
           </article>
 
           <blockquote className="work-preview-quote">
