@@ -1044,6 +1044,26 @@ html.theme-dark .brand-signature {
 }
 
 /* Work Preview Section */
+.work-preview-section-eyebrow {
+  font-size: var(--font-size-body-large);
+  color: var(--subtle-text);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  margin: 0 auto var(--space-xs) auto;
+  text-align: center;
+}
+
+.work-preview-section-tagline {
+  font-size: var(--font-size-body-large);
+  color: var(--text);
+  margin: 0 auto var(--space-2xl) auto;
+  width: 85%;
+  text-align: center;
+  line-height: 1.6;
+  font-style: italic;
+}
+
 .work-preview-section {
   width: 100vw;
   margin-left: calc(-50vw + 50%);
@@ -1137,11 +1157,11 @@ html.theme-dark .brand-signature {
 
 .work-preview-cta {
   align-self: flex-start;
-  padding: var(--space-xs) var(--space-md);
+  padding: 2px var(--space-xs);
   background: transparent;
   border: 1px solid var(--text);
   color: var(--text);
-  font-size: var(--font-size-body-small);
+  font-size: var(--font-size-meta);
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -1151,7 +1171,8 @@ html.theme-dark .brand-signature {
 }
 
 .work-preview-cta:hover {
-  background: var(--text);
+  background: var(--primary-hover);
+  border-color: var(--primary-hover);
   color: var(--surface);
 }
 
@@ -1160,10 +1181,32 @@ html.theme-dark .brand-signature {
   background: var(--subtle-surface);
   display: flex;
   flex-direction: column;
-  gap: var(--space-md);
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
   margin: 0;
   border-right: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
+}
+
+.work-preview-quote-inner {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: var(--space-md);
+}
+
+.work-preview-quote-bar {
+  width: 3px;
+  background: var(--secondary);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.work-preview-quote-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
 }
 
 .work-preview-quote p {
@@ -1172,7 +1215,6 @@ html.theme-dark .brand-signature {
   color: var(--text);
   line-height: 1.8;
   font-style: italic;
-  flex-grow: 1;
 }
 
 .work-preview-quote-credit {

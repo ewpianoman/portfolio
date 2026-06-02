@@ -61,47 +61,53 @@ export default function Home(): JSX.Element {
         </div>
       </section>
       <section className="work-preview-section" aria-label="Work preview">
-        <p className="hero-tagline">My work lives at the intersection of music, technology, and how people learn.</p>
+        <p className="work-preview-section-eyebrow">What I Do</p>
+        <p className="work-preview-section-tagline">My work lives at the intersection of music, technology, and how people learn.</p>
         
         <div className="work-preview-grid">
           <article className="work-preview-item">
             <div className="work-preview-meta">Performer · Arranger</div>
             <h3 className="work-preview-title">Music</h3>
-            <p className="work-preview-description">I perform, record, and arrange — primarily jazz, gospel, classical, and blues at the piano. My album <em>Hymns at the Piano</em> is available on all major streaming platforms.</p>
-            <button className="work-preview-cta">Streaming Now</button>
+            <p className="work-preview-description">I perform, record, and arrange piano music across jazz, gospel, classical, and blues. My album Hymns at the Piano is available on major streaming platforms.</p>
+            <button className="work-preview-cta">Listen</button>
           </article>
 
           <article className="work-preview-item">
             <div className="work-preview-meta">Essays · Ideas</div>
             <h3 className="work-preview-title">Writing</h3>
-            <p className="work-preview-description">I write about music education, technology, and what it means to build a life across disciplines. First essay coming soon — the kind of piece I wish I'd read ten years ago.</p>
-            <button className="work-preview-cta">First Piece in Progress</button>
+            <p className="work-preview-description">I write about music education, technology, and the challenge of building meaningful work across disciplines. Essays and longer reflections are in progress.</p>
+            <button className="work-preview-cta">Read Essays</button>
           </article>
 
           <article className="work-preview-item">
             <div className="work-preview-meta">Instruction · Curriculum</div>
             <h3 className="work-preview-title">Piano Studio</h3>
-            <p className="work-preview-description">I've been teaching piano privately for over 15 years, working with students of all ages and levels — in person in Southern Illinois and online.</p>
-            <button className="work-preview-cta">Accepting Students</button>
+            <p className="work-preview-description">I’ve taught piano privately for over 15 years, working with students of all ages and levels in Southern Illinois and online.</p>
+            <button className="work-preview-cta">Book a Lesson</button>
           </article>
 
           <article className="work-preview-item">
             <div className="work-preview-meta">Engineering · Open Source</div>
             <h3 className="work-preview-title">Tech Work</h3>
-            <p className="work-preview-description">I'm a software engineer building healthcare tools by day and music education technology by ambition. React, React Native, AWS — and eventually, my own company.</p>
-            <button className="work-preview-cta">See My Projects</button>
+            <p className="work-preview-description">I’m a software engineer building healthcare products and exploring what better tools for music education and creative work could look like.</p>
+            <button className="work-preview-cta">View Projects</button>
           </article>
 
           <article className="work-preview-item">
             <div className="work-preview-meta">Talks · Courses · Coaching</div>
             <h3 className="work-preview-title">Speaking</h3>
-            <p className="work-preview-description">Available for conferences, panels, and podcasts at the intersection of music education and technology. Courses and coaching in development.</p>
-            <button className="work-preview-cta">Booking 2026</button>
+            <p className="work-preview-description">I’m available for conferences, panels, podcasts, and workshops focused on music education, technology, and the future of learning.</p>
+            <button className="work-preview-cta">Inquire</button>
           </article>
 
           <blockquote className="work-preview-quote">
-            <p>"Learning is my hobby and my superpower — especially at the intersection of arts, technology, and cognition."</p>
-            <footer className="work-preview-quote-credit">— Eric Wilson</footer>
+            <div className="work-preview-quote-inner">
+              <div className="work-preview-quote-bar" aria-hidden="true" />
+              <div className="work-preview-quote-body">
+                <p>"Learning is my hobby and my superpower — especially at the intersection of arts, technology, and cognition."</p>
+                <footer className="work-preview-quote-credit">— Eric Wilson</footer>
+              </div>
+            </div>
           </blockquote>
         </div>
       </section>
