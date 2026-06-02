@@ -1045,17 +1045,18 @@ html.theme-dark .brand-signature {
 
 /* Work Preview Section */
 .work-preview-section-eyebrow {
-  font-size: var(--font-size-body-large);
-  color: var(--subtle-text);
+  display: block;
+  font-size: var(--font-size-meta);
+  font-weight: var(--font-weight-meta);
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 500;
-  margin: 0 auto var(--space-xs) auto;
+  color: var(--text-ghost);
+  margin: 0 auto var(--space-sm) auto;
   text-align: center;
 }
 
 .work-preview-section-tagline {
-  font-size: var(--font-size-body-large);
+  font-size: var(--font-size-h3);
   color: var(--text);
   margin: 0 auto var(--space-2xl) auto;
   width: 85%;

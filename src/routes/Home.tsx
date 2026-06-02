@@ -62,7 +62,7 @@ export default function Home(): JSX.Element {
       </section>
       <section className="work-preview-section" aria-label="Work preview">
         <p className="work-preview-section-eyebrow">What I Do</p>
-        <p className="work-preview-section-tagline">My work lives at the intersection of music, technology, and how people learn.</p>
+        <p className="work-preview-section-tagline">&ldquo;My work lives at the intersection of music, technology, and how people learn.&rdquo;</p>
         
         <div className="work-preview-grid">
           <article className="work-preview-item">
@@ -104,8 +104,8 @@ export default function Home(): JSX.Element {
             <div className="work-preview-quote-inner">
               <div className="work-preview-quote-bar" aria-hidden="true" />
               <div className="work-preview-quote-body">
-                <p>"Learning is my hobby and my superpower — especially at the intersection of arts, technology, and cognition."</p>
-                <footer className="work-preview-quote-credit">— Eric Wilson</footer>
+                <p>&ldquo;I’ve spent my career following curiosity, from music to teaching to software, and it’s led me to work focused on how people learn and the role thoughtful design plays in that.&rdquo;</p>
+                <footer className="work-preview-quote-credit">— ERIC WILSON</footer>
               </div>
             </div>
           </blockquote>
